@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Toppings.unity
     guid: 34038366f96d4ec43bda0a8f89901eb8
+  - enabled: 1
+    path: Assets/Scenes/New Folder/Blood.unity
+    guid: c2c48a7b4a206e84cba686ec7bf9e040
+  - enabled: 1
+    path: Assets/Scenes/Cafe.unity
+    guid: 3c6d8a4a5bcaf7d45b098b9ec6f46f87
+  - enabled: 1
+    path: Assets/Scenes/TestScene.unity
+    guid: b70acd3e1a4a63e449acc98cdd675ca9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

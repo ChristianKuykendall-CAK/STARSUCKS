@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MonitorLCDlcd.svg_0: 8940803840605149798
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

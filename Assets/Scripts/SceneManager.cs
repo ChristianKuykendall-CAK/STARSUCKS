@@ -17,7 +17,12 @@ public class SceneController : MonoBehaviour
         
     }
 
-    public void ToCoffee() // aka toppings
+    public void ToWaitingRoom() // aka MainScene
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void ToToppings() // aka toppings
     {
         SceneManager.LoadScene(1);
     }
@@ -27,13 +32,15 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(2);
     }
 
+    public void ToCafe()
+    {
+        SceneManager.LoadScene(3);
+    }
+
     public void ToDrawing()
     {
         SceneManager.LoadScene(4);
     }
 
-    public void ToWaitingRoom() // aka MainScene
-    {
-        SceneManager.LoadScene(0);
-    }
+    
 }
