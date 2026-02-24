@@ -17,8 +17,23 @@ public class SceneController : MonoBehaviour
         
     }
 
-    public void ToCoffee()
+    public void ToCoffee() // aka toppings
     {
         SceneManager.LoadScene(1);
+    }
+    
+    public void ToBlood()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public void ToDrawing()
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void ToWaitingRoom() // aka MainScene
+    {
+        SceneManager.LoadScene(0);
     }
 }
