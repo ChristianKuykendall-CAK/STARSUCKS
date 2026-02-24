@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 61e2f0ce14d313b49915b82ae0ba6fb1
+guid: f2ddb37978754cb43978b47a172d5819
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7355076764297812285
-    second: Screenshot 2026-02-14 at 00-40-40 Coffee shop bar counter with wine bottles.
-      modern design. vintage atmosphere. Premium Photo_0
+      213: 8834012785355152245
+    second: talkbubble_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -47,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,44 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Screenshot 2026-02-14 at 00-40-40 Coffee shop bar counter with wine bottles.
-        modern design. vintage atmosphere. Premium Photo_0
+      name: talkbubble_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 888
-        height: 591
+        x: 4
+        y: 7
+        width: 96
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c6ac48d6a48de990800000000000000
-      internalID: -7355076764297812285
+      spriteID: 57b5a5cd2d7b89a70800000000000000
+      internalID: 8834012785355152245
       vertices: []
       indices: 
       edges: []
@@ -153,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -163,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Screenshot 2026-02-14 at 00-40-40 Coffee shop bar counter with wine bottles. modern design. vintage atmosphere. Premium Photo_0: -7355076764297812285
+      talkbubble_0: 8834012785355152245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
