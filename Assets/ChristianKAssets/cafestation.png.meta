@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 99fbfce49e3eac34b9bc84f61e7b650d
+guid: ff2d18eccb7986048900d4b3da1c52e7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4009355068965086491
-    second: Untitled_Artwork-2_0
+      213: 8166151438437161763
+    second: cafestation_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_Artwork-2_0
+      name: cafestation_0
       rect:
         serializedVersion: 2
-        x: 147
+        x: 0
         y: 0
-        width: 803
-        height: 980
+        width: 3000
+        height: 2000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b156318513714a730800000000000000
-      internalID: 4009355068965086491
+      spriteID: 32b9716977ff35170800000000000000
+      internalID: 8166151438437161763
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled_Artwork-2_0: 4009355068965086491
+      cafestation_0: 8166151438437161763
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
