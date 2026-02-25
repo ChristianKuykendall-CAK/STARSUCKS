@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -59,7 +60,10 @@ public class NeedleController : MonoBehaviour
             Debug.Log("You've hit the vein!");
         }
     }
+    OnMove()
+    {
 
+    }
     void CheckGrounded()
     {
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
