@@ -1,4 +1,4 @@
-using UnityEngine;
+ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -6,35 +6,59 @@ public class CupSizes : MonoBehaviour
 {
 
     public Transform CupSpawner;
+    private GameObject currentCup;
+    private GameObject cupLid;
+    private GameObject straw;
+
     public GameObject Small;
     public GameObject Medium;
     public GameObject Large;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject Lid;
+    public GameObject Straw;
 
     public void SpawnSmall() // SPAWNING ITEMS
     {
-        Instantiate(Small, CupSpawner.position, CupSpawner.rotation);
+        if (currentCup == null)
+        {
+            currentCup = Instantiate(Small, CupSpawner);
+            currentCup.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        } 
     }
 
     public void SpawnMedium()
     {
-        Instantiate(Small, CupSpawner.position, CupSpawner.rotation);
+        if (currentCup == null)
+        {
+            currentCup = Instantiate(Medium, CupSpawner);
+            currentCup.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        } 
     }
 
     public void SpawnLarge()
     {
-        Instantiate(Large, CupSpawner.position, CupSpawner.rotation);
+        if (currentCup == null)
+        {
+            currentCup = Instantiate(Large, CupSpawner);
+            currentCup.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        } 
+    }
+
+    public void SpawnLid()
+    {
+        if (cupLid == null)
+        {
+            cupLid = Instantiate(Lid, CupSpawner);
+            cupLid.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        } 
+    }
+
+    public void SpawnStraw()
+    {
+        if (straw == null)
+        {
+            straw = Instantiate(Straw, CupSpawner);
+            straw.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        } 
     }
 
 

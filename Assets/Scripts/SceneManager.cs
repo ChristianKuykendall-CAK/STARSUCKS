@@ -42,5 +42,11 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(4);
     }
 
+    public void ReloadScene()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene);
+    }
+
     
 }
