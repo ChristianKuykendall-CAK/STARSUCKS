@@ -2,6 +2,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class NeedleController : MonoBehaviour
 {
@@ -10,11 +11,21 @@ public class NeedleController : MonoBehaviour
     public float detectRange = 1000f;
     private Rigidbody2D rb;
     public LayerMask armLayer;
+    public Transform posA;
+    public Transform posB;
+    private Vector2 pointA;
+    private Vector2 pointB;
+    public float speed = 1.0f;
+    public bool needleDrop = false;
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        pointA = new Vector2(posA.position.x, posA.position.y);
+        pointB = new Vector2(posB.position.x, posB.transform.position.y);
         rb = GetComponent<Rigidbody2D>();
-        StartCoroutine("DropNeedle");
+
     }
 
     // Update is called once per frame
@@ -37,10 +48,18 @@ public class NeedleController : MonoBehaviour
         }
         Debug.DrawRay(rb.position, Vector2.down, Color.red, 10f);
 
+        //Moves back and forth
+        if (!needleDrop)
+        {
+            float t = Mathf.PingPong(Time.fixedTime * speed, 1f);
+            float s = t * t * (3f - 2f * t);
+            transform.position = Vector2.Lerp(pointA, pointB, s);
+        }
     }
 
     IEnumerator DropNeedle()
     {
+        rb.linearVelocity = Vector2.zero;
         rb.gravityScale = -2;
         rb.linearVelocity = new Vector2(0, 5);
         yield return new WaitForSeconds(2f);
@@ -55,14 +74,15 @@ public class NeedleController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Vein"))
         {
-            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
 
             Debug.Log("You've hit the vein!");
         }
     }
-    OnMove()
-    {
-
+    void OnJump()
+    { 
+        needleDrop = true;
+        StartCoroutine("DropNeedle");
     }
     void CheckGrounded()
     {
