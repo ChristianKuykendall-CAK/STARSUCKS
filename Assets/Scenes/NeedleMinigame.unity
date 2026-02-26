@@ -181,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 1738279014789584149, guid: 91081e4532ea6674a84a839051b8b4f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -202,7 +202,7 @@ Transform:
   m_GameObject: {fileID: 529541439}
   serializedVersion: 2
   m_LocalRotation: {x: -0.4304593, y: -0.4304593, z: 0.56098557, w: -0.56098557}
-  m_LocalPosition: {x: 926, y: 248, z: 14}
+  m_LocalPosition: {x: 926, y: 248, z: 0}
   m_LocalScale: {x: 342.1, y: 342.1, z: 342.1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -702,12 +702,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280057706}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1375.2412, y: 996, z: 8.905172}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1576007338}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1399738007
 GameObject:
@@ -898,14 +898,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576007337}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 875.24115, y: 996, z: 8.905172}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -0, z: -1, w: 0}
+  m_LocalPosition: {x: -0.6092456, y: -11.297199, z: 0.3562069}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1280057707}
   - {fileID: 727732712}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1998849178}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1857306769
 GameObject:
@@ -1100,6 +1099,7 @@ Transform:
   m_Children:
   - {fileID: 2049225530}
   - {fileID: 1562143959}
+  - {fileID: 1576007338}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &1998849179
@@ -1121,7 +1121,7 @@ MonoBehaviour:
     m_Bits: 8
   posA: {fileID: 1280057707}
   posB: {fileID: 727732712}
-  speed: 0.5
+  speed: 0.25
   needleDrop: 0
 --- !u!50 &1998849180
 Rigidbody2D:
@@ -1401,6 +1401,6 @@ SceneRoots:
   - {fileID: 1857306773}
   - {fileID: 529541441}
   - {fileID: 2106706883}
+  - {fileID: 1280057707}
   - {fileID: 1998849178}
-  - {fileID: 1576007338}
   - {fileID: 1399738009}
