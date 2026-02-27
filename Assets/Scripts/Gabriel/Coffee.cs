@@ -5,17 +5,21 @@ using System.Text.RegularExpressions;
 [System.Serializable]
 public class Coffee
 {
-    public CoffeeOptions.Temps temp;
-    public CoffeeOptions.BloodTypes bloodType;
-    public CoffeeOptions.Toppings topping;
-    public CoffeeOptions.Sizes size;
+    [SerializeField] private CoffeeOptions.Temps _temp;
+    public CoffeeOptions.Temps temp { get { return _temp; } set { _temp = value; } }
+    [SerializeField] private CoffeeOptions.BloodTypes _bloodType;
+    public CoffeeOptions.BloodTypes bloodType { get { return _bloodType; } set { _bloodType = value; } }
+    [SerializeField] private CoffeeOptions.Toppings _topping;
+    public CoffeeOptions.Toppings topping { get { return _topping; } set { _topping = value; } }
+    [SerializeField] private CoffeeOptions.Sizes _size;
+    public CoffeeOptions.Sizes size { get { return _size; } set { _size = value; } }
 
     public Coffee()
     {
-        temp = 0;
-        bloodType = 0;
-        topping = 0;
-        size = 0;
+        _temp = 0;
+        _bloodType = 0;
+        _topping = 0;
+        _size = 0;
     }
 
     public static Coffee Randomize(Coffee coffee)
@@ -37,8 +41,8 @@ public class Coffee
 
     public void PrintDetails(TMP_Text log = null)
     {
-        string tempDisplay = ToDisplayString(temp);
-        string bloodTypeDisplay = bloodType.ToString().Replace("plus", "+").Replace("minus", "-");
+        string tempDisplay = ToDisplayString(_temp);
+        string bloodTypeDisplay = _bloodType.ToString().Replace("plus", "+").Replace("minus", "-");
         string toppingDisplay = ToDisplayString(topping);
         string sizeDisplay = ToDisplayString(size);
 

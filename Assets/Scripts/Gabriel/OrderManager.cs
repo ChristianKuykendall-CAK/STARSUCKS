@@ -5,7 +5,7 @@ public class OrderManager : MonoBehaviour
 {
     public static OrderManager instance;
     public CoffeeOptions coffeeOptions;
-    public Coffee currentOrder;
+    [SerializeField] public Coffee currentOrder;
     public TMP_Text log;
 
     void Awake()
