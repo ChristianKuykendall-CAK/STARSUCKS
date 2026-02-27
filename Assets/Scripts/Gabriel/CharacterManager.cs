@@ -1,17 +1,19 @@
 using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
-{    
-    [SerializeField]
+{
+    public static CharacterManager instance;
     public Character[] characters;
 
     public void Awake()
     {
-        TextAsset json = Resources.Load<TextAsset>("characters");
-        CharacterList characterList = JsonUtility.FromJson<CharacterList>(json.text);
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+
+        string jsonText = Resources.Load<TextAsset>("characters").text;
+        CharacterList characterList = JsonUtility.FromJson<CharacterList>(jsonText);
 
         characters = characterList.characters;
-        Debug.Log(characters);
     }
 
     public void Start()
@@ -29,15 +31,13 @@ public class CharacterManager : MonoBehaviour
 
 
 
-[SerializeField]
+[System.Serializable]
 public class CharacterList
 {
     public Character[] characters;
 }
 
-
-
-[SerializeField]
+[System.Serializable]
 public class Character
 {
     public string name;
