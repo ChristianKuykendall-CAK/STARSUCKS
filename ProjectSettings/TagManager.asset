@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Vein
+  - Clear
   layers:
   - Default
   - TransparentFX
