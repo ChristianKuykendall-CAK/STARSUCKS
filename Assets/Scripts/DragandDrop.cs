@@ -9,6 +9,7 @@ public class DragandDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public string cupSnap;
 
     public float snapDistance = 80f;
+    public Rigidbody rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -16,10 +17,17 @@ public class DragandDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         rectTransform = GetComponent<RectTransform>();
     }
 
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         transform.SetAsLastSibling();
+
+        rb.useGravity = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -42,6 +50,8 @@ public class DragandDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 transform.SetParent(snapPoint.transform);
             }
         }
+
+        rb.useGravity = true;
     }
 
 }

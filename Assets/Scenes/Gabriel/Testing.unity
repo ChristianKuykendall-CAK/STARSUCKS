@@ -1344,6 +1344,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d44d9a2abb767469531a0a492f78cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomNames:
+  - 
+  randomIntroDialogs: []
   characters: []
 --- !u!4 &851948326
 Transform:

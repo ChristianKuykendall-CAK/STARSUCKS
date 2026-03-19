@@ -1,7 +1,13 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CharacterManager : MonoBehaviour
 {
+    [Header("Random Characters")]
+    public List<string> randomNames;
+    public List<string> randomIntroDialogs;
+
+    [Header("Pre-made Characters")]
     public static CharacterManager instance;
     public Character[] characters;
 
@@ -26,6 +32,16 @@ public class CharacterManager : MonoBehaviour
                 Debug.Log(line);
             }
         }
+    }
+
+    public Character GenerateRandomCharacter()
+    {
+        Character newChar = new Character();
+
+        newChar.name = randomNames[Random.Range(0, randomNames.Count)];
+        newChar.dlines[0] = randomIntroDialogs[Random.Range(0, randomIntroDialogs.Count)];
+
+        return newChar;
     }
 }
 
