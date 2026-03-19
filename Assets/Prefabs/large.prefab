@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cupSnap: 
   snapDistance: 80
+  rb: {fileID: 0}
 --- !u!50 &-2315111747520124484
 Rigidbody2D:
   serializedVersion: 5
@@ -182,7 +183,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8864697319636325665
 BoxCollider2D:
   m_ObjectHideFlags: 0

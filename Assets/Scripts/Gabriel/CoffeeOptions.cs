@@ -1,13 +1,16 @@
 
+using System;
+using UnityEngine;
+
 public class CoffeeOptions
 {
     public enum Temps
     {
-        hot, cold
+        none, hot, cold
     }
     public enum BloodTypes
     {
-        Aplus, Aminus, Bplus, Bminus, ABplus, ABminus, Oplus, Ominus
+        none, Aplus, Aminus, Bplus, Bminus, ABplus, ABminus, Oplus, Ominus
     }
     public enum Toppings
     {
@@ -15,7 +18,7 @@ public class CoffeeOptions
     }
     public enum Sizes
     {
-        small, medium, large
+        none, small, medium, large
     }
     
     public static Temps[] temps = (Temps[])System.Enum.GetValues(typeof(Temps));
