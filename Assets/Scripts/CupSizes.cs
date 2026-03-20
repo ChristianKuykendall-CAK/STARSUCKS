@@ -4,9 +4,10 @@ using UnityEngine.UI;
 
 public class CupSizes : MonoBehaviour
 {
+    public static CupSizes instance;
 
     public Transform CupSpawner;
-    private GameObject currentCup;
+    public GameObject currentCup;
     private GameObject cupLid;
     private GameObject straw;
 
@@ -15,6 +16,12 @@ public class CupSizes : MonoBehaviour
     public GameObject Large;
     public GameObject Lid;
     public GameObject Straw;
+
+    void Awake()
+    {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+    }
 
     public void SpawnSmall() // SPAWNING ITEMS
     {
