@@ -7,6 +7,7 @@ public class DragandDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 {
     private RectTransform rectTransform;
     private float startGravityScale;
+    private bool snapped = false;
 
     public string cupSnap;
     public float snapDistance = 80f;
@@ -34,35 +35,28 @@ public class DragandDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void OnDrag(PointerEventData eventData)
     {
-        // Debug.Log(eventData.delta);
-        // rb.MovePosition(rectTransform.anchoredPosition + eventData.delta);
+        if (!snapped) {
+            rb.MovePosition(Mouse.current.position.ReadValue());
+        }
 
-        // Vector2 direction = (Vector2)rectTransform.position - Mouse.current.position.ReadValue();
-        // direction.Normalize();
-        // rb.AddForce(direction * 100);
-
-        rb.MovePosition(Mouse.current.position.ReadValue());
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        // GameObject snapPoint = GameObject.Find(cupSnap);
+        GameObject snapPoint = GameObject.Find(cupSnap);
 
-        // if (snapPoint != null)
-        // {
-        //     float distance = Vector2.Distance(rectTransform.position, snapPoint.transform.position);
-
-        //     Debug.Log(distance);
+        if (snapPoint != null)
+        {
+            float distance = Vector2.Distance(rectTransform.position, snapPoint.transform.position);
             
-        //     if (distance < snapDistance)
-        //     {
-        //         rb.AddForce(snapPoint.transform.position);
-        //         transform.SetParent(snapPoint.transform);
-        //     }
-        // }
-
-        rb.gravityScale = startGravityScale;
+            if (distance < snapDistance)
+            {
+                snapped = true;
+                rb.simulated = false;
+                rectTransform.position = snapPoint.transform.position;
+                transform.SetParent(snapPoint.transform);
+            }
+        }
+        else rb.gravityScale = startGravityScale;
     }
-
-
 }
