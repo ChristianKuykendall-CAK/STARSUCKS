@@ -26,11 +26,6 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-
-    public void ToToppings() // aka toppings
-    {
-        SceneManager.LoadScene(1);
-    }
     
 
     public void ToCafe()
