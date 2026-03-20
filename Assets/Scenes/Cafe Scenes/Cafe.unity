@@ -2389,8 +2389,8 @@ RectTransform:
   - {fileID: 77072031}
   - {fileID: 224689972}
   - {fileID: 378865928}
-  - {fileID: 1464105017}
   - {fileID: 1925897900}
+  - {fileID: 1464105017}
   m_Father: {fileID: 2147464955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2835,41 +2835,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684436008}
   m_CullTransparentMesh: 1
---- !u!1 &691381771
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 691381772}
-  m_Layer: 5
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &691381772
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691381771}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1464105017}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &739917560
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,6 +2864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 331ce413bb067bf4f8f9834699556191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cupSize: {fileID: 0}
+  bloodToppings: {fileID: 0}
 --- !u!4 &739917562
 Transform:
   m_ObjectHideFlags: 0
@@ -4351,16 +4318,15 @@ RectTransform:
   m_GameObject: {fileID: 1464105016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.19646853, y: 0.28838, z: 0.28838}
+  m_LocalScale: {x: 0.19646855, y: 0.28838, z: 0.28838}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1847303459}
-  - {fileID: 691381772}
   m_Father: {fileID: 632670030}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.174011, y: 158.51999}
+  m_AnchoredPosition: {x: 120.4, y: 75.8}
   m_SizeDelta: {x: 139.85, y: 90.1431}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464105018
@@ -5917,7 +5883,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cup Sizes
+  m_text: 'Create order
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
