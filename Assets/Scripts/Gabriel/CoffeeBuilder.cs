@@ -1,9 +1,11 @@
 using UnityEngine;
+using TMPro;
 
 public class CoffeeBuilder : MonoBehaviour
 {
     public static CoffeeBuilder instance;
     public Coffee coffee;
+    public int snappedObjCount = 0;
 
     void Awake()
     {
@@ -33,7 +35,8 @@ public class CoffeeBuilder : MonoBehaviour
 
     public void SubmitOrder()
     {
+        if (snappedObjCount < 2) return;
         bool isCorrect = OrderManager.instance.CompareCoffeeToOrder(coffee);
-        Debug.Log(isCorrect);
-    }    
+        GameObject.Find("TestTest").GetComponent<TMP_Text>().text = isCorrect ? "Yippee" : "Aw man, no.";
+    }
 }

@@ -53,6 +53,10 @@ public class DragandDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 snapped = true;
                 rb.simulated = false;
+                GetComponent<Image>().raycastTarget = false;
+
+                CoffeeBuilder.instance.snappedObjCount++;
+                
                 rectTransform.position = snapPoint.transform.position;
                 transform.SetParent(snapPoint.transform);
             }
