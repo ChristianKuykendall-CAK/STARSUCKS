@@ -34,7 +34,7 @@ public class OrderManager : MonoBehaviour
         bool isCorrect = false;
         
         if (
-            // coffee.temp == currentOrder.temp &&
+            coffee.temp == currentOrder.temp &&
             coffee.bloodType == currentOrder.bloodType &&
             // coffee.topping == currentOrder.topping &&
             coffee.size == currentOrder.size

@@ -35,7 +35,7 @@ public class CoffeeBuilder : MonoBehaviour
 
     public void SubmitOrder()
     {
-        bool isCorrect = false;
+        bool isCorrect;
         isCorrect = OrderManager.instance.CompareCoffeeToOrder(coffee);
         if (snappedObjCount < 2) isCorrect = false;
         GameObject.Find("TestTest").GetComponent<TMP_Text>().text = isCorrect ? "Yippee" : "Aw man, no.";
