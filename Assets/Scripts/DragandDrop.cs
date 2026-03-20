@@ -64,17 +64,5 @@ public class DragandDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         rb.gravityScale = startGravityScale;
     }
 
-    // void OnTriggerEnter(Collider other) // player hits the pickups
-    // {
 
-    //     if (other.gameObject.CompareTag("pickUp"))
-    //     {
-    //         other.gameObject.SetActive(false);
-    //         stockCount = stockCount + 1;
-    //         Objectives();
-
-    //     }
-
-
-    // }
 }

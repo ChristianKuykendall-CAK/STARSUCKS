@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+
+    public GameObject cupSize;
+    public GameObject bloodToppings;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,10 +30,6 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(1);
     }
     
-    public void ToBlood()
-    {
-        SceneManager.LoadScene(2);
-    }
 
     public void ToCafe()
     {
@@ -46,6 +45,18 @@ public class SceneController : MonoBehaviour
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
+    }
+
+    public void SwitchToppings()
+    {
+        cupSize.SetActive(false);
+        bloodToppings.SetActive(true);
+    }
+
+    public void SwitchBlood()
+    {
+        cupSize.SetActive(true);
+        bloodToppings.SetActive(false);
     }
 
     
