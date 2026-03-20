@@ -7,6 +7,7 @@ public class OrderManager : MonoBehaviour
     public CoffeeOptions coffeeOptions;
     [SerializeField] public Coffee currentOrder;
     public TMP_Text log;
+    public TMP_Text log2;
 
     void Awake()
     {
@@ -19,6 +20,7 @@ public class OrderManager : MonoBehaviour
         currentOrder = Coffee.Randomize(new Coffee());
 
         currentOrder.PrintDetails(log);
+        currentOrder.PrintDetails(log2);
     }
 
     public void GenerateNewOrder()
