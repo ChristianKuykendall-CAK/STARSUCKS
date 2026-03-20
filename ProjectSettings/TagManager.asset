@@ -3,15 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Vein
+  - Clear
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - arm
   - Water
   - UI
-  - OnDesk
+  - 
   - 
   - 
   - 
