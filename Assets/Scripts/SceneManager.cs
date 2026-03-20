@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
 
     public GameObject cupSize;
     public GameObject bloodToppings;
+    public GameObject normalCafe;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -49,15 +50,24 @@ public class SceneController : MonoBehaviour
 
     public void SwitchToppings()
     {
-        cupSize.SetActive(false);
-        bloodToppings.SetActive(true);
+        cupSize.SetActive(true);
+        bloodToppings.SetActive(false);
+        normalCafe.SetActive(false);
     }
 
     public void SwitchBlood()
     {
-        cupSize.SetActive(true);
-        bloodToppings.SetActive(false);
+        cupSize.SetActive(false);
+        bloodToppings.SetActive(true);
+        normalCafe.SetActive(false);
+
     }
 
+    public void SwitchToCafe()
+    {
+        cupSize.SetActive(false);
+        bloodToppings.SetActive(false);
+        normalCafe.SetActive(true);
+    }
     
 }
