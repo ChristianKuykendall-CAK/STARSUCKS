@@ -48,7 +48,7 @@ public class Coffee
         
         if (log)
         {
-            log.text = $"Coffee Details:\nTemp: {tempDisplay}\nBlood Type: {bloodTypeDisplay}\nTopping: {toppingDisplay}\nSize: {sizeDisplay}";
+            log.text = $"Coffee Details:\nSize: {sizeDisplay}\nTemp: {tempDisplay}\nBlood Type: {bloodTypeDisplay}\nTopping: {toppingDisplay}";
         }
 
         Debug.Log(tempDisplay);
