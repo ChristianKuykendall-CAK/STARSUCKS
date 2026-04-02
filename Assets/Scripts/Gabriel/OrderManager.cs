@@ -8,6 +8,7 @@ public class OrderManager : MonoBehaviour
     [SerializeField] public Coffee currentOrder;
     public TMP_Text log;
     public TMP_Text log2;
+    public GameObject nextOrderButton;
 
     void Awake()
     {
@@ -27,6 +28,7 @@ public class OrderManager : MonoBehaviour
     {
         Coffee.Randomize(currentOrder);
         currentOrder.PrintDetails(log);
+        currentOrder.PrintDetails(log2);
     }
 
     public bool CompareCoffeeToOrder(Coffee coffee)
@@ -36,7 +38,7 @@ public class OrderManager : MonoBehaviour
         if (
             coffee.temp == currentOrder.temp &&
             coffee.bloodType == currentOrder.bloodType &&
-            // coffee.topping == currentOrder.topping &&
+            coffee.topping == currentOrder.topping &&
             coffee.size == currentOrder.size
             ) /* then */ isCorrect = true;
 

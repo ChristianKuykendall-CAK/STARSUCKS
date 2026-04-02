@@ -10,7 +10,11 @@ public class SceneController : MonoBehaviour
     public GameObject bloodToppings;
     public GameObject normalCafe;
     public GameObject paperOrder;
+    public GameObject[] customers;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    
     void Start()
     {
         
