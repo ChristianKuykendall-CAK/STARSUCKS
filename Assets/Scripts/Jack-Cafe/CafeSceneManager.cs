@@ -3,8 +3,9 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour
+public class CafeSceneManager : MonoBehaviour
 {
+    public static CafeSceneManager instance;
 
     public GameObject cupSize;
     public GameObject bloodToppings;
@@ -14,6 +15,11 @@ public class SceneController : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
+    void Awake()
+    {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+    }
     
     void Start()
     {
@@ -24,22 +30,6 @@ public class SceneController : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void ToWaitingRoom() // aka MainScene
-    {
-        SceneManager.LoadScene(0);
-    }
-    
-
-    public void ToCafe()
-    {
-        SceneManager.LoadScene(3);
-    }
-
-    public void ToDrawing()
-    {
-        SceneManager.LoadScene(4);
     }
 
     public void ReloadScene()

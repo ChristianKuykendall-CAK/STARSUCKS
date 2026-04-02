@@ -43,6 +43,7 @@ public class CoffeeBuilder : MonoBehaviour
         if (isCorrect == true)
         {
             OrderManager.instance.nextOrderButton.SetActive(true);
+            
         }
 
         
@@ -51,6 +52,8 @@ public class CoffeeBuilder : MonoBehaviour
     public void NextOrder()
     {
         OrderManager.instance.nextOrderButton.SetActive(false);
+        // CafeSceneManager.instance.customer1.SetActive(false);
+        // CafeSceneManager.instance.customer2.SetActive(true);
         OrderManager.instance.GenerateNewOrder();
         ClearCoffee();
     }
