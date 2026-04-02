@@ -17,11 +17,14 @@ public class NeedleController : MonoBehaviour
     private Vector2 pointB;
     public float speed = 1.0f;
     public bool needleDrop = false;
+    private Vector3 origPos;
+    public ChanceScript chances;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        origPos = gameObject.transform.position;
         pointA = new Vector2(posA.position.x, posA.position.y);
         pointB = new Vector2(posB.position.x, posB.transform.position.y);
         rb = GetComponent<Rigidbody2D>();
@@ -78,6 +81,12 @@ public class NeedleController : MonoBehaviour
 
             Debug.Log("You've hit the vein!");
         }
+        if (collision.gameObject.CompareTag("Arm"))
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            StartCoroutine("ResetNeedle");
+            Debug.Log("You've missed the vein!");
+        }
     }
     void OnJump()
     { 
@@ -88,5 +97,14 @@ public class NeedleController : MonoBehaviour
     {
         //isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
         //shadow.gameObject.SetActive(!); //Only show if not grounded
+    }
+    IEnumerator ResetNeedle()
+    {
+        chances.UpdateHearts(NeedleMinigameManager.instance.GetChances());
+        NeedleMinigameManager.instance.DecreaseChances();
+        yield return new WaitForSeconds(2f);
+        gameObject.transform.position = origPos;
+        rb.constraints = RigidbodyConstraints2D.None;
+        needleDrop = false;
     }
 }
