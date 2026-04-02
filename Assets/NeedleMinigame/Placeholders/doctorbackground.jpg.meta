@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 10ddf977a83af214e9d464dd2fe37112
+guid: b7d0c98bc65bb5743b920f9037499f83
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2718811319071528007
-    second: form_0
+      213: 6586724544493796098
+    second: doctorbackground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: form_0
+      name: doctorbackground_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 732
-        height: 937
+        width: 1920
+        height: 1435
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9bb2e6b9287d44ad0800000000000000
-      internalID: -2718811319071528007
+      spriteID: 20b36e3431fb86b50800000000000000
+      internalID: 6586724544493796098
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      form_0: -2718811319071528007
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
