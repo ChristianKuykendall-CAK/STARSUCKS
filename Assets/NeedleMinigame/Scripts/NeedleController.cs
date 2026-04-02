@@ -19,6 +19,8 @@ public class NeedleController : MonoBehaviour
     public bool needleDrop = false;
     private Vector3 origPos;
     public ChanceScript chances;
+    public GameObject failureScreen;
+    
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,7 +30,7 @@ public class NeedleController : MonoBehaviour
         pointA = new Vector2(posA.position.x, posA.position.y);
         pointB = new Vector2(posB.position.x, posB.transform.position.y);
         rb = GetComponent<Rigidbody2D>();
-
+        failureScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -84,6 +86,7 @@ public class NeedleController : MonoBehaviour
         if (collision.gameObject.CompareTag("Arm"))
         {
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            NeedleMinigameManager.instance.DecreaseChances();
             StartCoroutine("ResetNeedle");
             Debug.Log("You've missed the vein!");
         }
@@ -100,11 +103,19 @@ public class NeedleController : MonoBehaviour
     }
     IEnumerator ResetNeedle()
     {
-        chances.UpdateHearts(NeedleMinigameManager.instance.GetChances());
-        NeedleMinigameManager.instance.DecreaseChances();
-        yield return new WaitForSeconds(2f);
-        gameObject.transform.position = origPos;
-        rb.constraints = RigidbodyConstraints2D.None;
-        needleDrop = false;
+        int numChances = NeedleMinigameManager.instance.GetChances();
+        if(numChances > 0)
+        {
+            chances.UpdateHearts(numChances);
+            yield return new WaitForSeconds(2f);
+            gameObject.transform.position = origPos;
+            rb.constraints = RigidbodyConstraints2D.None;
+            needleDrop = false;
+        }
+        else
+        {
+            failureScreen.SetActive(true);
+        }
+            
     }
 }
