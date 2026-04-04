@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Vein
-  - Clear
+  - Patient
+  - Arm
   layers:
   - Default
   - TransparentFX
