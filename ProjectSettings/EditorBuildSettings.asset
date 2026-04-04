@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/PatientRoom.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Cafe Scenes/Toppings.unity
+    guid: 34038366f96d4ec43bda0a8f89901eb8
+  - enabled: 1
+    path: Assets/Scenes/Cafe Scenes/Blood.unity
+    guid: c2c48a7b4a206e84cba686ec7bf9e040
+  - enabled: 1
+    path: Assets/Scenes/Cafe Scenes/Cafe.unity
+    guid: 3c6d8a4a5bcaf7d45b098b9ec6f46f87
+  - enabled: 1
+    path: Assets/Scenes/NeedleMinigame.unity
+    guid: b70acd3e1a4a63e449acc98cdd675ca9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
