@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blood bag (1)_0: 4269317352900195037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

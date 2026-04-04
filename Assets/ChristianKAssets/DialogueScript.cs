@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class DialogueScript : MonoBehaviour
@@ -26,6 +27,10 @@ public class DialogueScript : MonoBehaviour
         }
         else if(dialoguecounter == 4){
             dialogueTextBox.text = "Cassie:\nI absolutely will!";
+        }
+        else if (dialoguecounter == 5)
+        {
+            SceneManager.LoadScene("Cafe");
         }
 
     }

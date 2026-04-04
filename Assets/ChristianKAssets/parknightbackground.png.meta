@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      parknightbackground_0: 680344304666819947
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
