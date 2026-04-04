@@ -41,14 +41,14 @@ public class Coffee
 
     public void PrintDetails(TMP_Text log = null)
     {
+        string sizeDisplay = ToDisplayString(size);
         string tempDisplay = ToDisplayString(_temp);
         string bloodTypeDisplay = _bloodType.ToString().Replace("plus", "+").Replace("minus", "-");
         string toppingDisplay = ToDisplayString(topping);
-        string sizeDisplay = ToDisplayString(size);
-
+        
         if (log)
         {
-            log.text = $"Coffee Details:\nTemp: {tempDisplay}\nBlood Type: {bloodTypeDisplay}\nTopping: {toppingDisplay}\nSize: {sizeDisplay}";
+            log.text = $"Coffee Details:\nSize: {sizeDisplay}\nTemp: {tempDisplay}\nBlood Type: {bloodTypeDisplay}\nTopping: {toppingDisplay}";
         }
 
         Debug.Log(tempDisplay);

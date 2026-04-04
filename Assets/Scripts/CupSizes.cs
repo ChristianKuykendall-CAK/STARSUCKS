@@ -4,9 +4,10 @@ using UnityEngine.UI;
 
 public class CupSizes : MonoBehaviour
 {
+    public static CupSizes instance;
 
     public Transform CupSpawner;
-    private GameObject currentCup;
+    public GameObject currentCup;
     private GameObject cupLid;
     private GameObject straw;
 
@@ -16,12 +17,19 @@ public class CupSizes : MonoBehaviour
     public GameObject Lid;
     public GameObject Straw;
 
+    void Awake()
+    {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+    }
+
     public void SpawnSmall() // SPAWNING ITEMS
     {
         if (currentCup == null)
         {
             currentCup = Instantiate(Small, CupSpawner);
             currentCup.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            CoffeeBuilder.instance.SetSize(CoffeeOptions.Sizes.small);
         } 
     }
 
@@ -31,6 +39,7 @@ public class CupSizes : MonoBehaviour
         {
             currentCup = Instantiate(Medium, CupSpawner);
             currentCup.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            CoffeeBuilder.instance.SetSize(CoffeeOptions.Sizes.medium);
         } 
     }
 
@@ -40,6 +49,7 @@ public class CupSizes : MonoBehaviour
         {
             currentCup = Instantiate(Large, CupSpawner);
             currentCup.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            CoffeeBuilder.instance.SetSize(CoffeeOptions.Sizes.large);
         } 
     }
 

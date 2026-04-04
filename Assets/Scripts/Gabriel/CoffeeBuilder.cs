@@ -1,8 +1,17 @@
 using UnityEngine;
+using TMPro;
 
 public class CoffeeBuilder : MonoBehaviour
 {
+    public static CoffeeBuilder instance;
     public Coffee coffee;
+    public int snappedObjCount = 0;
+
+    void Awake()
+    {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
+    }
 
     public void SetTemp(CoffeeOptions.Temps tempChoice)
     {
@@ -26,7 +35,16 @@ public class CoffeeBuilder : MonoBehaviour
 
     public void SubmitOrder()
     {
-        bool isCorrect = OrderManager.instance.CompareCoffeeToOrder(coffee);
-        Debug.Log(isCorrect);
-    }    
+        bool isCorrect;
+        isCorrect = OrderManager.instance.CompareCoffeeToOrder(coffee);
+        if (snappedObjCount < 2) isCorrect = false;
+        GameObject.Find("TestTest").GetComponent<TMP_Text>().text = isCorrect ? "Yippee" : "Aw man, no.";
+    }
+
+    public void ClearCoffee()
+    {
+        coffee = new Coffee();
+        snappedObjCount = 0;
+        Destroy(CupSizes.instance.currentCup);
+    }
 }
