@@ -12,10 +12,13 @@ public class MainMenuButton : MonoBehaviour,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        Debug.Log(gameObject.name + " Hover Enter");
         animator.SetBool("Hovering", true);
     }
+
     public void OnPointerExit(PointerEventData eventData)
     {
+        Debug.Log(gameObject.name + " Hover Exit");
         animator.SetBool("Hovering", false);
     }
 }

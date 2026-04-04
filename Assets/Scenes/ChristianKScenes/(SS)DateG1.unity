@@ -474,8 +474,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1427221019}
-        m_TargetAssemblyTypeName: DialogueScript, Assembly-CSharp
+      - m_Target: {fileID: 1427221021}
+        m_TargetAssemblyTypeName: DialogueScriptDateG1, Assembly-CSharp
         m_MethodName: Counter
         m_Mode: 1
         m_Arguments:
@@ -1287,7 +1287,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b73c9821006c55f4fb29b381facb3397, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 99fbfce49e3eac34b9bc84f61e7b650d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1307,8 +1307,8 @@ Transform:
   m_GameObject: {fileID: 1245518999}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.54, y: -1.1, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalPosition: {x: 4.86, y: -1.05, z: 0}
+  m_LocalScale: {x: 0.006, y: 0.006, z: 0.006}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1322,7 +1322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1427221020}
-  - component: {fileID: 1427221019}
+  - component: {fileID: 1427221021}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -1330,19 +1330,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1427221019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427221018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cabf2bc4995e19d499175728ea0c0825, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueTextBox: {fileID: 22473651}
 --- !u!4 &1427221020
 Transform:
   m_ObjectHideFlags: 0
@@ -1358,6 +1345,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1427221021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427221018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da062c529437fbb4fb5b14abab1309f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueTextBox: {fileID: 22473651}
 --- !u!1 &1569408571
 GameObject:
   m_ObjectHideFlags: 0
