@@ -139,10 +139,10 @@ TextureImporter:
       name: eyes_0
       rect:
         serializedVersion: 2
-        x: 97
-        y: 93
-        width: 72
-        height: 64
+        x: 0
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: eyes_1
       rect:
         serializedVersion: 2
-        x: 367
-        y: 93
-        width: 72
-        height: 64
+        x: 270
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: eyes_2
       rect:
         serializedVersion: 2
-        x: 637
-        y: 93
-        width: 72
-        height: 64
+        x: 540
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +205,10 @@ TextureImporter:
       name: eyes_3
       rect:
         serializedVersion: 2
-        x: 907
-        y: 93
-        width: 72
-        height: 64
+        x: 810
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +227,10 @@ TextureImporter:
       name: eyes_4
       rect:
         serializedVersion: 2
-        x: 1177
-        y: 93
-        width: 72
-        height: 64
+        x: 1080
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +249,10 @@ TextureImporter:
       name: eyes_5
       rect:
         serializedVersion: 2
-        x: 1447
-        y: 93
-        width: 72
-        height: 64
+        x: 1350
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

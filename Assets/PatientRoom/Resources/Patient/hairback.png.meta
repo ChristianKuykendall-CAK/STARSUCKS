@@ -118,10 +118,10 @@ TextureImporter:
       name: hairback_0
       rect:
         serializedVersion: 2
-        x: 289
-        y: 53
-        width: 248
-        height: 132
+        x: 0
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: hairback_1
       rect:
         serializedVersion: 2
-        x: 558
-        y: 53
-        width: 248
-        height: 132
+        x: 270
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: hairback_2
       rect:
         serializedVersion: 2
-        x: 827
-        y: 53
-        width: 248
-        height: 132
+        x: 540
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: hairback_3
       rect:
         serializedVersion: 2
-        x: 1096
-        y: 53
-        width: 248
-        height: 132
+        x: 810
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +206,10 @@ TextureImporter:
       name: hairback_4
       rect:
         serializedVersion: 2
-        x: 1365
-        y: 53
-        width: 248
-        height: 132
+        x: 1080
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,6 +220,28 @@ TextureImporter:
       bones: []
       spriteID: e2d87884ccd7de04ead28b379953ed14
       internalID: 1892550613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hairback_5
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 270
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780e57cf7213f0b41b35396d073adffb
+      internalID: 48749609
       vertices: []
       indices: 
       edges: []
@@ -243,6 +265,7 @@ TextureImporter:
       hairback_2: 500238914
       hairback_3: -1435078990
       hairback_4: 1892550613
+      hairback_5: 48749609
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

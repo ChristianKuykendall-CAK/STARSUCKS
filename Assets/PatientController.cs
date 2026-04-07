@@ -11,6 +11,12 @@ public class PatientController : MonoBehaviour
     public int speed = 10;
     public float angle = 15f;
 
+    //Head Stuff
+    public SpriteRenderer patient_eyes;
+    public SpriteRenderer patient_mouth;
+    public SpriteRenderer patient_frontHair;
+    public SpriteRenderer patient_backHair;
+
 
 
     private void Start()

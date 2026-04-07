@@ -124,10 +124,10 @@ TextureImporter:
       name: hairfront_0
       rect:
         serializedVersion: 2
-        x: 72
-        y: 82
-        width: 128
-        height: 112
+        x: 0
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,10 +146,10 @@ TextureImporter:
       name: hairfront_1
       rect:
         serializedVersion: 2
-        x: 342
-        y: 82
-        width: 128
-        height: 112
+        x: 270
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: hairfront_2
       rect:
         serializedVersion: 2
-        x: 612
-        y: 82
-        width: 128
-        height: 112
+        x: 540
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +190,10 @@ TextureImporter:
       name: hairfront_3
       rect:
         serializedVersion: 2
-        x: 882
-        y: 82
-        width: 128
-        height: 112
+        x: 810
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +212,10 @@ TextureImporter:
       name: hairfront_4
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 82
-        width: 128
-        height: 112
+        x: 1080
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: hairfront_5
       rect:
         serializedVersion: 2
-        x: 1422
-        y: 82
-        width: 128
-        height: 112
+        x: 1350
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,10 +256,10 @@ TextureImporter:
       name: hairfront_6
       rect:
         serializedVersion: 2
-        x: 1692
-        y: 82
-        width: 128
-        height: 112
+        x: 1620
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: hairfront_7
       rect:
         serializedVersion: 2
-        x: 1962
-        y: 82
-        width: 128
-        height: 112
+        x: 1890
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

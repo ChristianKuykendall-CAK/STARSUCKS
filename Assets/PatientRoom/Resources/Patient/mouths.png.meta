@@ -115,10 +115,10 @@ TextureImporter:
       name: mouths_0
       rect:
         serializedVersion: 2
-        x: 106
-        y: 73
-        width: 60
-        height: 57
+        x: 0
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,10 +137,10 @@ TextureImporter:
       name: mouths_1
       rect:
         serializedVersion: 2
-        x: 378
-        y: 73
-        width: 60
-        height: 57
+        x: 270
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +159,10 @@ TextureImporter:
       name: mouths_2
       rect:
         serializedVersion: 2
-        x: 650
-        y: 73
-        width: 60
-        height: 57
+        x: 540
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: mouths_3
       rect:
         serializedVersion: 2
-        x: 922
-        y: 73
-        width: 60
-        height: 57
+        x: 810
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: mouths_4
       rect:
         serializedVersion: 2
-        x: 1194
-        y: 73
-        width: 60
-        height: 57
+        x: 1080
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
