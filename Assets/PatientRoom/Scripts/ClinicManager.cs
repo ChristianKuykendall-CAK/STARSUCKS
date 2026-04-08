@@ -42,4 +42,5 @@ public class ClinicManager : MonoBehaviour
         Debug.Log("ClickDetected");
         SceneManager.LoadScene("BloodExtraction");
     }
+    public void 
 }
