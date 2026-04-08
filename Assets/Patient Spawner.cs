@@ -1,7 +1,7 @@
 using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
-using System;
+//using System;
 
 public class PatientSpawner : MonoBehaviour
 {
@@ -11,7 +11,6 @@ public class PatientSpawner : MonoBehaviour
     public Sprite[] backHairs;
     public string[] firstName;
     public string[] lastName;
-    public string[] bloodType;
 
 
     public GameObject patientPrefab;
@@ -41,6 +40,10 @@ public class PatientSpawner : MonoBehaviour
     void Spawn()
     {
         System.Random random = new System.Random();
+
+
+        float amountBlood = UnityEngine.Random.Range(50f, 300f);
+        string[] bloodType = {"AB+", "AB-", "AB", "A+", "A-", "A", "B+", "B-", "B", "O+", "O-", "O" };
         int eye = random.Next(0, eyes.Length);
         int mouth = random.Next(0, mouths.Length);
         int frontHair = random.Next(0, frontHairs.Length);
@@ -56,6 +59,22 @@ public class PatientSpawner : MonoBehaviour
         instance.GetComponent<PatientController>().patient_backHair.sprite = backHairs[backHair];
         instance.GetComponent<PatientController>().patientName = (firstName[first]+ " " + lastName[last]);
         instance.GetComponent<PatientController>().bloodType = bloodType[blood];
+
+        instance.GetComponent<PatientController>().bloodAmount = amountBlood;
+        //Gameplay aspects based on appearance
+        instance.GetComponent<PatientController>().nervousness = 2;
+        if (eye == 4)
+        {
+            instance.GetComponent<PatientController>().nervousness += 5;
+        }
+        if (mouth == 4)
+        {
+            instance.GetComponent<PatientController>().nervousness += 5;
+        }
+        if (mouth == 5)
+        {
+            instance.GetComponent<PatientController>().nervousness = 0;
+        }
         offset += 1f;
     }
 }

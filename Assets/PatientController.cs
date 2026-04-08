@@ -4,12 +4,12 @@ using UnityEngine;
 public class PatientController : MonoBehaviour
 {
     public bool isSelected = false;
-    public string patientName;
-    public string bloodType;
+
     private Transform patient;
     private Quaternion origRot;
     public int speed = 10;
     public float angle = 15f;
+    private string comments;
 
     //Head Stuff
     public SpriteRenderer patient_eyes;
@@ -17,6 +17,15 @@ public class PatientController : MonoBehaviour
     public SpriteRenderer patient_frontHair;
     public SpriteRenderer patient_backHair;
 
+    //Quirks
+    public bool isNervous;
+    public bool isPainResistant;
+    public string patientName;
+    public float nervousness;
+
+    //Game Values
+    public float bloodAmount;
+    public string bloodType;
 
 
     private void Start()
@@ -29,11 +38,13 @@ public class PatientController : MonoBehaviour
         isSelected = !isSelected;
         if (isSelected)
         {
+            FormController.instance.ClearForm();
             FormController.instance.FillForm(this);
             FormController.instance.StartCoroutine("MovePage");
         }
         else
         {
+            FormController.instance.ClearForm();
             FormController.instance.StartCoroutine("RemovePage");
         }
     }
