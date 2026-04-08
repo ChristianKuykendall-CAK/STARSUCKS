@@ -12,8 +12,12 @@ public class FormController : MonoBehaviour
 
     public TMP_Text nameText;
     public TMP_Text bloodTypeText;
-    public TMP_Text commentsText; 
+    public TMP_Text commentsText;
 
+    //Values for minigame
+    private float patientNervousness;
+    private float patientBloodAmount;
+    private string patientBloodType;
 
 
     void Awake()
@@ -34,6 +38,7 @@ public class FormController : MonoBehaviour
 
     public void FillForm(PatientController patient)
     {
+        MovePage();
         nameText.text = patient.patientName;
         bloodTypeText.text = patient.bloodType;
         //hints about nervousness
@@ -59,7 +64,7 @@ public class FormController : MonoBehaviour
         {
             commentsText.text += "A disappointing source of blood.\n";
         }
-        else if (patient.nervousness > 100 && patient.nervousness < 200)
+        else if (patient.nervousness >= 100 && patient.nervousness < 200)
         {
             commentsText.text += "A good source of blood.\n";
         }
@@ -67,11 +72,14 @@ public class FormController : MonoBehaviour
         {
             commentsText.text += "An excellent source of blood.\n";
         }
+        NeedleMinigameManager.instance.SetNervousness(patient.nervousness);
     }
 
     public void ClearForm()
     {
+        RemovePage();
         commentsText.text = string.Empty;
+        NeedleMinigameManager.instance.SetNervousness(0);
     }
 
     public void MovePage()
@@ -88,5 +96,6 @@ public class FormController : MonoBehaviour
         //formTransform.position = Vector3.Lerp(viewSpot.position, origPos, 2f);
         //formTransform.rotation = Quaternion.Lerp(viewSpot.rotation, origRot, 2f);
     }
+
 
 }

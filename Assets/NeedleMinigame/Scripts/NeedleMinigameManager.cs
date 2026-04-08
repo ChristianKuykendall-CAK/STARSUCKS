@@ -8,6 +8,10 @@ public class NeedleMinigameManager : MonoBehaviour
     private int chances = 3;
     private bool needleHit = false;
     private string bloodMinigame;
+    private float nervousness;
+    private float bloodAmount;
+
+
     //public Animator sceneAnim;
     void Awake()
     {
@@ -18,7 +22,16 @@ public class NeedleMinigameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-
+    public void SetNervousness(float amount)
+    {
+        nervousness = amount;
+    }
+    
+    public float GetNervousness()
+    {
+        return nervousness;
+    }
+   
     public void DecreaseChances()
     {
         --chances;

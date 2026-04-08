@@ -1,8 +1,10 @@
 using System.Collections;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class PatientController : MonoBehaviour
 {
+    public static PatientController selectedPatient;
     public bool isSelected = false;
 
     private Transform patient;
@@ -21,12 +23,12 @@ public class PatientController : MonoBehaviour
     public bool isNervous;
     public bool isPainResistant;
     public string patientName;
-    public float nervousness;
 
     //Game Values
+    public float nervousness;
     public float bloodAmount;
     public string bloodType;
-
+    public static int InstanceCount { get; private set; }
 
     private void Start()
     {
@@ -35,21 +37,36 @@ public class PatientController : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        isSelected = !isSelected;
-        if (isSelected)
+
+        if (selectedPatient != null && selectedPatient != this)
         {
-            FormController.instance.ClearForm();
-            FormController.instance.FillForm(this);
-            FormController.instance.StartCoroutine("MovePage");
+            selectedPatient.Deselect();
         }
-        else
-        {
-            FormController.instance.ClearForm();
-            FormController.instance.StartCoroutine("RemovePage");
-        }
+
+        // Select this object
+        Select();
+
     }
 
-     void Update()
+    void Select()
+    {
+        FormController.instance.FillForm(this);
+        isSelected = true;
+        selectedPatient = this;
+        // Optional: notify UI / info panel
+        Debug.Log($"{name} selected");
+
+
+    }
+    void Deselect()
+    {
+        isSelected = false;
+        FormController.instance.ClearForm();
+        Debug.Log($"{name} deselected");
+    }
+
+
+    void Update()
     {
         if (!isSelected) 
         { 
@@ -61,5 +78,20 @@ public class PatientController : MonoBehaviour
         {
             patient.rotation = origRot;
         }
+    }
+
+    
+
+    private void OnEnable()
+    {
+        InstanceCount++;
+        Debug.Log($"{gameObject.name} spawned. Total: {InstanceCount}");
+    }
+
+    public void RemovePatient()
+    {
+        Destroy(selectedPatient.gameObject);
+        InstanceCount = Mathf.Max(0, InstanceCount - 1);
+        Debug.Log($"{gameObject.name} removed. Total: {InstanceCount}");
     }
 }

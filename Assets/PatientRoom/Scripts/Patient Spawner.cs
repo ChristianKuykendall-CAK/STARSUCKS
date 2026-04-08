@@ -20,15 +20,19 @@ public class PatientSpawner : MonoBehaviour
     private float offset = 0;
 
 
-    void Start()
+    void OnAwake()
+    {
+        StartCoroutine(SpawnPatients());
+    }
+
+    private void Start()
     {
         offset = 0;
-        StartCoroutine(SpawnPatients());
     }
 
     IEnumerator SpawnPatients()
     {
-        while( currentPatientCount < maxPatients)
+        while( PatientController.InstanceCount < maxPatients)
         {
             Spawn();
             currentPatientCount++;
@@ -67,14 +71,14 @@ public class PatientSpawner : MonoBehaviour
         {
             instance.GetComponent<PatientController>().nervousness += 5;
         }
-        if (mouth == 4)
+        if (mouth == 3)
         {
             instance.GetComponent<PatientController>().nervousness += 5;
         }
-        if (mouth == 5)
+        if (mouth == 4)
         {
             instance.GetComponent<PatientController>().nervousness = 0;
         }
-        offset += 1f;
+        offset += 1.5f;
     }
 }
