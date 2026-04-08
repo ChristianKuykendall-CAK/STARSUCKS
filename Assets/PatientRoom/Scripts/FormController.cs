@@ -42,35 +42,38 @@ public class FormController : MonoBehaviour
         nameText.text = patient.patientName;
         bloodTypeText.text = patient.bloodType;
         //hints about nervousness
-        if (patient.nervousness == 0)
+        if (!patient.isSelected)
         {
-            commentsText.text += "Nonchalant about it.\n";
-        }
-        else if(patient.nervousness >= 1 && patient.nervousness < 5)
-        {
-            commentsText.text += "A bit nervous about it.\n";
-        }
-        else if (patient.nervousness >= 5 && patient.nervousness < 10)
-        {
-            commentsText.text += "Pretty nervous about it.\n";
-        }
-        else
-        {
-            commentsText.text += "Freaking out about it.\n";
-        }
+            if (patient.nervousness == 0)
+            {
+                commentsText.text += "Nonchalant about it.\n";
+            }
+            else if (patient.nervousness >= 1 && patient.nervousness < 5)
+            {
+                commentsText.text += "A bit nervous about it.\n";
+            }
+            else if (patient.nervousness >= 5 && patient.nervousness < 10)
+            {
+                commentsText.text += "Pretty nervous about it.\n";
+            }
+            else
+            {
+                commentsText.text += "Freaking out about it.\n";
+            }
 
-        //hints about blood amount
-        if (patient.bloodAmount < 100)
-        {
-            commentsText.text += "A disappointing source of blood.\n";
-        }
-        else if (patient.nervousness >= 100 && patient.nervousness < 200)
-        {
-            commentsText.text += "A good source of blood.\n";
-        }
-        else
-        {
-            commentsText.text += "An excellent source of blood.\n";
+            //hints about blood amount
+            if (patient.bloodAmount < 100)
+            {
+                commentsText.text += "A disappointing source of blood.\n";
+            }
+            else if (patient.nervousness >= 100 && patient.nervousness < 200)
+            {
+                commentsText.text += "A good source of blood.\n";
+            }
+            else
+            {
+                commentsText.text += "An excellent source of blood.\n";
+            }
         }
         NeedleMinigameManager.instance.SetNervousness(patient.nervousness);
     }

@@ -20,12 +20,11 @@ public class PatientSpawner : MonoBehaviour
     private float offset = 0;
 
 
-    void OnAwake()
+    void Awake()
     {
         StartCoroutine(SpawnPatients());
     }
-
-    private void Start()
+    void Start()
     {
         offset = 0;
     }
@@ -44,7 +43,7 @@ public class PatientSpawner : MonoBehaviour
     void Spawn()
     {
         System.Random random = new System.Random();
-
+        offset += 1.5f;
 
         float amountBlood = UnityEngine.Random.Range(50f, 300f);
         string[] bloodType = {"AB+", "AB-", "AB", "A+", "A-", "A", "B+", "B-", "B", "O+", "O-", "O" };
@@ -79,6 +78,5 @@ public class PatientSpawner : MonoBehaviour
         {
             instance.GetComponent<PatientController>().nervousness = 0;
         }
-        offset += 1.5f;
     }
 }
