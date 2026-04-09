@@ -8,7 +8,7 @@ public class NeedleMinigameManager : MonoBehaviour
     private int chances = 3;
     private bool needleHit = false;
     private string bloodMinigame;
-    public Animator sceneAnim;
+    //public Animator sceneAnim;
     void Awake()
     {
         if (instance == null)

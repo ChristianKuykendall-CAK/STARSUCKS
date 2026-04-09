@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class CoffeeBuilder : MonoBehaviour
@@ -39,6 +40,15 @@ public class CoffeeBuilder : MonoBehaviour
         isCorrect = OrderManager.instance.CompareCoffeeToOrder(coffee);
         if (snappedObjCount < 2) isCorrect = false;
         GameObject.Find("TestTest").GetComponent<TMP_Text>().text = isCorrect ? "Yippee" : "Aw man, no.";
+        if(isCorrect)
+        {
+            Invoke(nameof(GoToPatientRoom), 3f);
+        }
+    }
+
+    void GoToPatientRoom()
+    {
+         SceneManager.LoadScene("PatientRoom");
     }
 
     public void ClearCoffee()

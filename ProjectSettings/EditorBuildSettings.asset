@@ -6,20 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PatientRoom.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/ChristianKScenes/(SS)MainMenu.unity
+    guid: 71949fa74ef90d446b5780af50d4e609
   - enabled: 1
-    path: Assets/Scenes/Cafe Scenes/Toppings.unity
-    guid: 34038366f96d4ec43bda0a8f89901eb8
-  - enabled: 1
-    path: Assets/Scenes/Cafe Scenes/Blood.unity
-    guid: c2c48a7b4a206e84cba686ec7bf9e040
+    path: Assets/Scenes/ChristianKScenes/(SS)Backstory.unity
+    guid: 48fea40b3fa20034fae0a11fd8058abe
   - enabled: 1
     path: Assets/Scenes/Cafe Scenes/Cafe.unity
-    guid: 3c6d8a4a5bcaf7d45b098b9ec6f46f87
+    guid: ccf94739fdd071344bc10e55b6e4ddb0
+  - enabled: 1
+    path: Assets/Scenes/PatientRoom.unity
+    guid: 5054adf4be7756949b509fa483155549
   - enabled: 1
     path: Assets/Scenes/NeedleMinigame.unity
+    guid: cf50048c83dcc8d43b6bcd2a095925a4
+  - enabled: 1
+    path: Assets/Scenes/BloodExtraction.unity
+    guid: 51b520daed7b7cf4f924a63fc442c26c
+  - enabled: 0
+    path: Assets/Scenes/ChristianKScenes/TestScene.unity
     guid: b70acd3e1a4a63e449acc98cdd675ca9
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 5bc2e3e50e7892e4d83e231c70868585, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
