@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b1d69ac26fcbc5b42a878cc8d68d76eb
+guid: f0a5140303d2b7f45b5b166d4f95707d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6313872588622443602
-    second: batbuttonQuitTemplate_0
+      213: 3630603511118150114
+    second: buffvampire_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: batbuttonQuitTemplate_0
+      name: buffvampire_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 46
-        width: 267
-        height: 98
+        x: 53
+        y: 0
+        width: 402
+        height: 538
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eab451e355e9068a0800000000000000
-      internalID: -6313872588622443602
+      spriteID: 2e9bb7858ae726230800000000000000
+      internalID: 3630603511118150114
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      batbuttonQuitTemplate_0: -6313872588622443602
+      buffvampire_0: 3630603511118150114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

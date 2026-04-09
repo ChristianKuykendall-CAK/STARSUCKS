@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f9541eaf00ca4c646ac49b349918d17e
+guid: 0812f7f17d63dfe43bdad6ab673e02e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4240977330579911339
-    second: Untitled_Artwork_1_0
+      213: 2337439016000929306
+    second: chillvampire_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled_Artwork_1_0
+      name: chillvampire_0
       rect:
         serializedVersion: 2
-        x: 249
+        x: 70
         y: 0
-        width: 622
-        height: 960
+        width: 393
+        height: 493
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55dcc4666950525c0800000000000000
-      internalID: -4240977330579911339
+      spriteID: a1ebfd89660407020800000000000000
+      internalID: 2337439016000929306
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled_Artwork_1_0: -4240977330579911339
+      chillvampire_0: 2337439016000929306
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

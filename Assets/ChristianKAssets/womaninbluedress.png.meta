@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cd35bb5f38c4d1e459a92d19d0a140d3
+guid: b0edd54433b04754ba50c446596fed9c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1427348888326913129
-    second: parknightbackground(1)_0
+      213: 1690380154626816526
+    second: womaninbluedress_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: parknightbackground(1)_0
+      name: womaninbluedress_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 118
         y: 0
-        width: 3000
-        height: 2000
+        width: 307
+        height: 483
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 96c36436046fec310800000000000000
-      internalID: 1427348888326913129
+      spriteID: e0ab6eb6bcf657710800000000000000
+      internalID: 1690380154626816526
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      parknightbackground(1)_0: 1427348888326913129
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

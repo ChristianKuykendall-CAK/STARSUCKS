@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 398425681c25a794893dcdd3d7e04269
+guid: 7072eaa53e03522498e031bf8aeb6d0d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8893548409930236888
-    second: batbuttonCreditsTemplate_0
+      213: -1746029851934490150
+    second: hotbusinessvampire_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: batbuttonCreditsTemplate_0
+      name: hotbusinessvampire_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 46
-        width: 267
-        height: 98
+        x: 118
+        y: 0
+        width: 315
+        height: 483
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 82c3e5957d4c39480800000000000000
-      internalID: -8893548409930236888
+      spriteID: ad1873cb91bd4c7e0800000000000000
+      internalID: -1746029851934490150
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      batbuttonCreditsTemplate_0: -8893548409930236888
+      hotbusinessvampire_0: -1746029851934490150
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

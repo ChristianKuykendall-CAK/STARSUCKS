@@ -1237,7 +1237,7 @@ GameObject:
   - component: {fileID: 1245519001}
   - component: {fileID: 1245519000}
   m_Layer: 0
-  m_Name: jackiedaytona
+  m_Name: G1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1287,7 +1287,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 99fbfce49e3eac34b9bc84f61e7b650d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0812f7f17d63dfe43bdad6ab673e02e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1307,8 +1307,8 @@ Transform:
   m_GameObject: {fileID: 1245518999}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.86, y: -1.05, z: 0}
-  m_LocalScale: {x: 0.006, y: 0.006, z: 0.006}
+  m_LocalPosition: {x: 3.8600001, y: -0.049999952, z: 0}
+  m_LocalScale: {x: 0.012, y: 0.012, z: 0.012}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1419,7 +1419,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 680344304666819947, guid: 31c193a5c0911a645a8ca2ae7337032b, type: 3}
+  m_Sprite: {fileID: 1427348888326913129, guid: cd35bb5f38c4d1e459a92d19d0a140d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
