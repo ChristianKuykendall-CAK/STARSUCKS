@@ -24,37 +24,29 @@ public class Coffee
 
     public static Coffee Randomize(Coffee coffee)
     {
-        int randTemp = Random.Range(0, CoffeeOptions.temps.Length);
+        int randTemp = Random.Range(1, CoffeeOptions.temps.Length);
         coffee.temp = (CoffeeOptions.Temps)randTemp;
 
-        int randBloodType = Random.Range(0, CoffeeOptions.bloodTypes.Length);
+        int randBloodType = Random.Range(1, CoffeeOptions.bloodTypes.Length);
         coffee.bloodType = (CoffeeOptions.BloodTypes)randBloodType;
         
         int randToppping = Random.Range(0, CoffeeOptions.toppings.Length);
         coffee.topping = (CoffeeOptions.Toppings)randToppping;
         
-        int randSize = Random.Range(0, CoffeeOptions.sizes.Length);
+        int randSize = Random.Range(1, CoffeeOptions.sizes.Length);
         coffee.size = (CoffeeOptions.Sizes)randSize;
 
         return coffee;
     }
 
-    public void PrintDetails(TMP_Text log = null)
+    public string GetPrintDetails()
     {
         string sizeDisplay = ToDisplayString(size);
         string tempDisplay = ToDisplayString(_temp);
         string bloodTypeDisplay = _bloodType.ToString().Replace("plus", "+").Replace("minus", "-");
         string toppingDisplay = ToDisplayString(topping);
-        
-        if (log)
-        {
-            log.text = $"Coffee Details:\nSize: {sizeDisplay}\nTemp: {tempDisplay}\nBlood Type: {bloodTypeDisplay}\nTopping: {toppingDisplay}";
-        }
 
-        Debug.Log(tempDisplay);
-        Debug.Log(bloodTypeDisplay);
-        Debug.Log(toppingDisplay);
-        Debug.Log(sizeDisplay);
+        return $"Coffee Details:\nSize: {sizeDisplay}\nTemp: {tempDisplay}\nBlood Type: {bloodTypeDisplay}\nTopping: {toppingDisplay}";
     }
 
     public static string ToDisplayString(System.Enum value)
@@ -64,7 +56,21 @@ public class Coffee
         // Add space before capital letters
         string withSpaces = Regex.Replace(raw, "(\\B[A-Z])", " $1");
 
+        withSpaces = withSpaces.Replace("plus", "+");
+        withSpaces = withSpaces.Replace("minus", "-");
+
         // Capitalize first letter
         return char.ToUpper(withSpaces[0]) + withSpaces.Substring(1);
     }
+
+    public static string ReplaceSymbols(System.Enum value)
+    {
+        string stringToChange =  value.ToString();
+        stringToChange = stringToChange.Replace("plus", "+");
+        stringToChange = stringToChange.Replace("minus", "-");
+
+        // Capitalize first letter
+        return stringToChange;
+    }
+
 }

@@ -6,7 +6,9 @@ public class OrderManager : MonoBehaviour
     public static OrderManager instance;
     public CoffeeOptions coffeeOptions;
     [SerializeField] public Coffee currentOrder;
-    public TMP_Text log;
+    public TMP_Text nameBox;
+    public TMP_Text dialogBox;
+    private RandDialogs randDialogs;
 
     void Awake()
     {
@@ -16,15 +18,26 @@ public class OrderManager : MonoBehaviour
 
     void Start()
     {
-        currentOrder = Coffee.Randomize(new Coffee());
+        randDialogs = JsonUtility.FromJson<RandDialogs>(Resources.Load<TextAsset>("randomDialogs").text);
 
-        currentOrder.PrintDetails(log);
+        Debug.Log(randDialogs.intros);
+
+        GenerateNewOrder();
     }
 
     public void GenerateNewOrder()
     {
         Coffee.Randomize(currentOrder);
-        currentOrder.PrintDetails(log);
+        PrintDetails(GetOrderString());
+    }
+
+    public string GetOrderString()
+    {
+        string randIntro = randDialogs.intros[Random.Range(0, randDialogs.intros.Length)];
+        string randOutro = randDialogs.outros[Random.Range(0, randDialogs.outros.Length)];
+        string toppingString = currentOrder.topping != 0 ? $" and {Coffee.ToDisplayString(currentOrder.topping)}" : "";
+        string orderString = $"{randIntro} a {Coffee.ToDisplayString(currentOrder.size)} {Coffee.ToDisplayString(currentOrder.temp)} coffee with {Coffee.ReplaceSymbols(currentOrder.bloodType)} blood{toppingString}{randOutro}";
+        return orderString;
     }
 
     public bool CompareCoffeeToOrder(Coffee coffee)
@@ -40,4 +53,18 @@ public class OrderManager : MonoBehaviour
 
         return isCorrect;
     }
+
+    public void PrintDetails(string text)
+    {
+        if (nameBox) nameBox.text = "Customer";
+        if (dialogBox) dialogBox.text = text;
+    }
+}
+
+
+[System.Serializable]
+class RandDialogs
+{
+    public string[] intros;
+    public string[] outros;
 }
