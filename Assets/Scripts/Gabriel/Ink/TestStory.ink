@@ -7,13 +7,20 @@ VAR day = 0
 {day == 1: -> day1 | {day == 2: -> day2 | -> day3}}
 
 == day1 == 
-- It's day one Anon!! yay :3
-    * Option 1 
-    -> option1
-    * Option 2
-    -> option2
-- (option1) Blah blah blah! -> end
-- (option2) Oh my goddddd so trueeee! -> end
+- Hey! how are you today?
+    * Good, how about you?
+    -> howAboutYou
+    * I'm good.
+    -> imGood
+    
+- (howAboutYou)
+    - I'm good! Thanks for asking. 
+    - Ba ba ba lin lin.
+    -> end
+    
+- (imGood)
+    - Oh, good. 
+    -> end
 
 - (end) -> END
 

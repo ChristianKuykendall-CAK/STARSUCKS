@@ -31,14 +31,10 @@ public class InkManager : MonoBehaviour
 
     void RefreshStory()
     {
-        // Continue the story if there is more content
-        while (story.canContinue)
-        {
-            string text = story.Continue();
-            dialogueBox.text = text; // Display text to UI in a real game
-        }
+        if (!story.canContinue) return;
 
-        // Handle choices if available
+        dialogueBox.text = story.Continue();
+
         if (story.currentChoices.Count > 0)
         {
             foreach (var choice in story.currentChoices)
@@ -48,10 +44,20 @@ public class InkManager : MonoBehaviour
                 newButton.onClick.AddListener(() =>
                 {
                     story.ChooseChoiceIndex(choice.index);
+                    story.Continue();
                     DestroyButtons();
                     RefreshStory();
                 });
             }
+        }
+        else if (story.canContinue) {
+            Button newButton = Instantiate(choiceButtonPrefab, choiceButtonContainer);
+            newButton.GetComponentInChildren<TMP_Text>().text = "continue";
+            newButton.onClick.AddListener(() =>
+            {
+                DestroyButtons();
+                RefreshStory();
+            });
         }
     }
 
