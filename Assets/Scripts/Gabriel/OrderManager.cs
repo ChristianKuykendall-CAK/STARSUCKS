@@ -8,6 +8,7 @@ public class OrderManager : MonoBehaviour
     [SerializeField] public Coffee currentOrder;
     public TMP_Text nameBox;
     public TMP_Text dialogBox;
+    public TMP_Text orderPaper;
     private RandDialogs randDialogs;
 
     void Awake()
@@ -29,6 +30,8 @@ public class OrderManager : MonoBehaviour
     {
         Coffee.Randomize(currentOrder);
         PrintDetails(GetOrderString());
+
+        
     }
 
     public string GetOrderString()
@@ -58,6 +61,7 @@ public class OrderManager : MonoBehaviour
     {
         if (nameBox) nameBox.text = "Customer";
         if (dialogBox) dialogBox.text = text;
+        
     }
 }
 
