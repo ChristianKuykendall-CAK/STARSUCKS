@@ -13538,7 +13538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &535518445
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20308,7 +20308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &851749388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49655,7 +49655,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1892478536}
-  - component: {fileID: 1892478535}
+  - component: {fileID: 1892478538}
+  - component: {fileID: 1892478537}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49663,18 +49664,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1892478535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892478534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f094fc86954fcd84fa38c0dfe79a836f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1892478536
 Transform:
   m_ObjectHideFlags: 0
@@ -49690,6 +49679,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1892478537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892478534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146897e0bdc9c3c4899d8caea963088d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1892478538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892478534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d44d9a2abb767469531a0a492f78cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomNames: []
+  randomIntroDialogs: []
+  characters: []
 --- !u!1 &1901383253
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,14 +42,18 @@ public class CoffeeBuilder : MonoBehaviour
         GameObject.Find("TestTest").GetComponent<TMP_Text>().text = isCorrect ? "Yippee" : "Aw man, no.";
         if(isCorrect)
         {
-            Invoke(nameof(GoToPatientRoom), 3f);
+            Invoke(nameof(NextCustomer), 3f);
+            //Invoke(nameof(GoToPatientRoom), 3f);
         }
     }
-
-    void GoToPatientRoom()
+    void NextCustomer()
     {
-         SceneManager.LoadScene("PatientRoom");
+
     }
+    //void GoToPatientRoom()
+    //{
+    //     SceneManager.LoadScene("PatientRoom");
+    //}
 
     public void ClearCoffee()
     {
