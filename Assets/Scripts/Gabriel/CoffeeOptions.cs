@@ -1,6 +1,4 @@
-
 using System;
-using UnityEngine;
 
 public class CoffeeOptions
 {
@@ -21,8 +19,8 @@ public class CoffeeOptions
         small, medium, large
     }
     
-    public static Temps[] temps = (Temps[])System.Enum.GetValues(typeof(Temps));
-    public static BloodTypes[] bloodTypes = (BloodTypes[])System.Enum.GetValues(typeof(BloodTypes));
-    public static Toppings[] toppings = (Toppings[])System.Enum.GetValues(typeof(Toppings));
-    public static Sizes[] sizes = (Sizes[])System.Enum.GetValues(typeof(Sizes));
+    public static Temps[] temps = (Temps[])Enum.GetValues(typeof(Temps));
+    public static BloodTypes[] bloodTypes = (BloodTypes[])Enum.GetValues(typeof(BloodTypes));
+    public static Toppings[] toppings = (Toppings[])Enum.GetValues(typeof(Toppings));
+    public static Sizes[] sizes = (Sizes[])Enum.GetValues(typeof(Sizes));
 }
