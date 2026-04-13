@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09ed5a049711e445ab992ad76dd9224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempVal: 2
+  tempVal: 1
 --- !u!1 &42420524
 GameObject:
   m_ObjectHideFlags: 0
@@ -6567,7 +6567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98537ad71d9c6e44fb13ee79b03451e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodType: 2
+  bloodType: 1
 --- !u!1 &272287760
 GameObject:
   m_ObjectHideFlags: 0
@@ -8597,7 +8597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98537ad71d9c6e44fb13ee79b03451e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodType: 3
+  bloodType: 2
 --- !u!1 &378865927
 GameObject:
   m_ObjectHideFlags: 0
@@ -15247,7 +15247,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &631388459
 Transform:
   m_ObjectHideFlags: 0
@@ -17723,6 +17723,7 @@ MonoBehaviour:
   bloodToppings: {fileID: 631388458}
   normalCafe: {fileID: 632670029}
   paperOrder: {fileID: 417314753}
+  customers: []
 --- !u!4 &739917562
 Transform:
   m_ObjectHideFlags: 0
@@ -20571,7 +20572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98537ad71d9c6e44fb13ee79b03451e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodType: 7
+  bloodType: 6
 --- !u!1 &870857325
 GameObject:
   m_ObjectHideFlags: 0
@@ -24641,7 +24642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98537ad71d9c6e44fb13ee79b03451e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodType: 5
+  bloodType: 4
 --- !u!1 &1020340014
 GameObject:
   m_ObjectHideFlags: 0
@@ -27851,7 +27852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98537ad71d9c6e44fb13ee79b03451e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodType: 8
+  bloodType: 7
 --- !u!1 &1112880016
 GameObject:
   m_ObjectHideFlags: 0
@@ -33618,7 +33619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98537ad71d9c6e44fb13ee79b03451e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodType: 1
+  bloodType: 0
 --- !u!1 &1338866620
 GameObject:
   m_ObjectHideFlags: 0
@@ -34631,7 +34632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09ed5a049711e445ab992ad76dd9224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempVal: 1
+  tempVal: 0
 --- !u!1 &1391914657
 GameObject:
   m_ObjectHideFlags: 0
@@ -45587,7 +45588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98537ad71d9c6e44fb13ee79b03451e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodType: 4
+  bloodType: 3
 --- !u!1 &1749282880
 GameObject:
   m_ObjectHideFlags: 0
@@ -53380,7 +53381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98537ad71d9c6e44fb13ee79b03451e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodType: 6
+  bloodType: 5
 --- !u!1 &2026940705
 GameObject:
   m_ObjectHideFlags: 0
