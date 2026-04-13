@@ -30,8 +30,7 @@ public class OrderManager : MonoBehaviour
     {
         Coffee.Randomize(currentOrder);
         PrintDetails(GetOrderString());
-
-        
+        orderPaper.text = currentOrder.GetPrintDetails();
     }
 
     public string GetOrderString()

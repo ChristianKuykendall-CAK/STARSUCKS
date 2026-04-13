@@ -5,24 +5,28 @@ using UnityEngine.UI;
 
 public class Button_Controller : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    Button buttonComponent;
+    public float textDownAmt = 12;
     TMP_Text textComponent;
+    Vector3 startPos;
+    Vector3 downPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        buttonComponent = GetComponent<Button>();
         textComponent = GetComponentInChildren<TMP_Text>();
+
+        startPos = textComponent.rectTransform.position;
+        downPos = startPos + Vector3.up * -textDownAmt;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        textComponent.alignment = TextAlignmentOptions.Top;
+        textComponent.rectTransform.position = startPos;
         Debug.Log("Button released!");
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        textComponent.alignment = TextAlignmentOptions.Bottom;
+        textComponent.rectTransform.position = downPos;
     }
 }
