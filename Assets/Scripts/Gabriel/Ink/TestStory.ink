@@ -1,7 +1,7 @@
 VAR girl = 0
 VAR day = 0
 
-{girl == 1: ->Madeleine | {girl == 2: -> Priscilla | -> Guinevere}}
+{girl == 1: ->Madeleine | {girl == 2: -> Elizabeth | -> Guinevere}}
 
 ===Madeleine===
 {day == 1: -> day1 | {day == 2: -> day2 | -> day3}}
@@ -34,7 +34,7 @@ VAR day = 0
 
 
 
-===Priscilla===
+===Elizabeth===
 
 -> END
 

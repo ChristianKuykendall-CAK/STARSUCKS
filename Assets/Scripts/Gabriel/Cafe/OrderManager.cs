@@ -1,14 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class OrderManager : MonoBehaviour
 {
     public static OrderManager instance;
+    public CafeSceneManager cafeSceneManager;
     public CoffeeOptions coffeeOptions;
+    public List<Coffee> MainGirlOrders;
     [SerializeField] public Coffee currentOrder;
-    public TMP_Text nameBox;
-    public TMP_Text dialogBox;
-    public TMP_Text orderPaper;
+
     private RandDialogs randDialogs;
 
     void Awake()
@@ -17,20 +19,21 @@ public class OrderManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    void Start()
+    public void LoadJSONData()
     {
         randDialogs = JsonUtility.FromJson<RandDialogs>(Resources.Load<TextAsset>("randomDialogs").text);
-
-        Debug.Log(randDialogs.intros);
-
-        GenerateNewOrder();
     }
 
     public void GenerateNewOrder()
     {
         Coffee.Randomize(currentOrder);
-        PrintDetails(GetOrderString());
-        orderPaper.text = currentOrder.GetPrintDetails();
+        cafeSceneManager.DisplayName("Customer");
+        cafeSceneManager.DisplayDialog(GetOrderString());
+        cafeSceneManager.DisplayPaperOrder(currentOrder.GetPrintDetails());
+    }
+
+    public void SetOrderByGirlIndex(int girlIndex) {
+        currentOrder = MainGirlOrders[girlIndex];
     }
 
     public string GetOrderString()
@@ -43,24 +46,19 @@ public class OrderManager : MonoBehaviour
     }
 
     public bool CompareCoffeeToOrder(Coffee coffee)
-    {
+    {   
         bool isCorrect = false;
-        
         if (
             coffee.temp == currentOrder.temp &&
             coffee.bloodType == currentOrder.bloodType &&
-            // coffee.topping == currentOrder.topping &&
+            coffee.topping == currentOrder.topping &&
             coffee.size == currentOrder.size
-            ) /* then */ isCorrect = true;
-
+            ) /* then */
+        {
+            isCorrect = true;
+            cafeSceneManager.NextEvent();
+        }
         return isCorrect;
-    }
-
-    public void PrintDetails(string text)
-    {
-        if (nameBox) nameBox.text = "Customer";
-        if (dialogBox) dialogBox.text = text;
-        
     }
 }
 

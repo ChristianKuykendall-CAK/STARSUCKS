@@ -39,22 +39,9 @@ public class CoffeeBuilder : MonoBehaviour
         bool isCorrect;
         isCorrect = OrderManager.instance.CompareCoffeeToOrder(coffee);
         if (snappedObjCount < 2) isCorrect = false;
-        GameObject.Find("TestTest").GetComponent<TMP_Text>().text = isCorrect ? "Yippee" : "Aw man, no.";
-        if(isCorrect)
-        {
-            Invoke(nameof(NextCustomer), 3f);
-            //Invoke(nameof(GoToPatientRoom), 3f);
-        }
+        GameObject.Find("TestTest").GetComponent<TMP_Text>().text = isCorrect ? "" : "Aw man, no.";
     }
-    void NextCustomer()
-    {
-
-    }
-    //void GoToPatientRoom()
-    //{
-    //     SceneManager.LoadScene("PatientRoom");
-    //}
-
+    
     public void ClearCoffee()
     {
         coffee = new Coffee();
