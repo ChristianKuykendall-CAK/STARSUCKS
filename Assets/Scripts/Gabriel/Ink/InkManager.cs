@@ -1,6 +1,5 @@
 using Ink.Runtime;
 using TMPro;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +9,6 @@ public class InkManager : MonoBehaviour
 
     [Header("Ink")]
     public TextAsset inkJSONAsset;
-    public Story story;
 
     [Header("Prefabs")]
     public Button choiceButtonPrefab;
@@ -18,52 +16,59 @@ public class InkManager : MonoBehaviour
     [Header("Scene references")]
     public Transform choiceButtonContainer;
 
-    [Header("Gameplay Variables")]
-    public int day = 1;
+    private Story story;
+
+    void Start()
+    {
+        story = new Story(inkJSONAsset.text);
+    }
 
     public void DisplayDialog(int currentGirlIndex)
     {
-        story = new Story(inkJSONAsset.text);
-
         story.variablesState["girl"] = currentGirlIndex + 1;
         story.variablesState["day"] = GameManager.instance.GetCurrentDay();
 
-        RefreshStory();
+        ProgressStory();
     }
 
-    void RefreshStory()
+    void ProgressStory()
     {
-        if (!story.canContinue) {
-            cafeSceneManager.ToggleButtonsActive();
-            return;
-        }
-
-        cafeSceneManager.DisplayDialog(story.Continue());
-
-        if (story.currentChoices.Count > 0)
+        if (story.canContinue)
         {
-            foreach (var choice in story.currentChoices)
+            cafeSceneManager.DisplayDialog(story.Continue());
+        }
+    }
+
+    public void ShowProgressionOption()
+    {
+        if (story.currentChoices.Count > 0)
+            {
+                foreach (var choice in story.currentChoices)
+                {
+                    Button newButton = Instantiate(choiceButtonPrefab, choiceButtonContainer);
+                    newButton.GetComponentInChildren<TMP_Text>().text = choice.text;
+                    newButton.onClick.AddListener(() =>
+                    {
+                        DestroyButtons();
+                        story.ChooseChoiceIndex(choice.index);
+                        ProgressStory();
+                    });
+                }
+            }
+            else if (story.canContinue)
             {
                 Button newButton = Instantiate(choiceButtonPrefab, choiceButtonContainer);
-                newButton.GetComponentInChildren<TMP_Text>().text = choice.text;
+                newButton.GetComponentInChildren<TMP_Text>().text = "...";
                 newButton.onClick.AddListener(() =>
                 {
-                    story.ChooseChoiceIndex(choice.index);
-                    story.Continue();
                     DestroyButtons();
-                    RefreshStory();
+                    ProgressStory();
                 });
             }
-        }
-        else if (story.canContinue) {
-            Button newButton = Instantiate(choiceButtonPrefab, choiceButtonContainer);
-            newButton.GetComponentInChildren<TMP_Text>().text = "continue";
-            newButton.onClick.AddListener(() =>
-            {
-                DestroyButtons();
-                RefreshStory();
-            });
-        }
+            else {
+                cafeSceneManager.ToggleButtonsActive();
+                return;
+            }
     }
 
     void DestroyButtons()

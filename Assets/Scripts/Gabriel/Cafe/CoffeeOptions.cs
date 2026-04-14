@@ -4,7 +4,7 @@ public class CoffeeOptions
 {
     public enum Temps
     {
-        none, hot, cold
+        none, hot, iced
     }
     public enum BloodTypes
     {

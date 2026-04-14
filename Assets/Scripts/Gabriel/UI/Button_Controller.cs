@@ -10,24 +10,30 @@ public class Button_Controller : MonoBehaviour, IPointerDownHandler, IPointerUpH
     Vector3 downPos;
     public bool isInteractable = true;
 
+    private bool isFirstPress = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         textComponent = GetComponentInChildren<TMP_Text>();
-
-        startPos = textComponent.rectTransform.position;
-        downPos = startPos + Vector3.up * -textDownAmt;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        textComponent.rectTransform.position = startPos;
-        Debug.Log("Button released!");
+        if (isInteractable)
+            textComponent.rectTransform.position = startPos;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         if (isInteractable)
+        {
+            if (isFirstPress) {
+                startPos = textComponent.rectTransform.position;
+                downPos = startPos + Vector3.up * -textDownAmt;
+                isFirstPress = false;
+            }
             textComponent.rectTransform.position = downPos;
+        }       
     }
 }

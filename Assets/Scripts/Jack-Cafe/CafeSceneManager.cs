@@ -33,6 +33,7 @@ public class CafeSceneManager : MonoBehaviour
     public RectTransform customerEnterPoint;
     public RectTransform customerOrderPoint;
     public RectTransform customerExitPoint;
+    public float typingSpeed = 1;
 
     [Header("Gameplay Variables")]
     public int numRandOrdersBetweenGirls = 2;
@@ -43,6 +44,7 @@ public class CafeSceneManager : MonoBehaviour
     private int currentGirlIndex;
     private Image _customerImage;
     private RectTransform _customerImageTransform;
+    private Coroutine currentlyTyping;
 
 
     
@@ -151,7 +153,25 @@ public class CafeSceneManager : MonoBehaviour
 
     public void DisplayDialog(string newDialogText)
     {
-        _dialogText.text = newDialogText;
+        if (currentlyTyping != null) StopCoroutine(currentlyTyping);
+        currentlyTyping = StartCoroutine(TypeDialog(newDialogText));
+    }
+
+    private IEnumerator TypeDialog(string text)
+    {
+        string outputString = "";
+
+        foreach (char c in text)
+        {
+            outputString += c;
+
+            _dialogText.text = outputString;
+
+            yield return new WaitForSeconds(0.05f / typingSpeed);
+        }
+
+        currentlyTyping = null;
+        if (_nameText.text != randCustomerNamePlaceholder) inkManager.ShowProgressionOption();
     }
 
     public void DisplayCustomerName()

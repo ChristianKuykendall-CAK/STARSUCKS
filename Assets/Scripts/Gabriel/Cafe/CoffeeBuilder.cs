@@ -41,6 +41,7 @@ public class CoffeeBuilder : MonoBehaviour
         isCorrect = OrderManager.instance.CompareCoffeeToOrder(coffee);
         if (snappedObjCount < 2) isCorrect = false;
         if (isCorrect) cafeSceneManager.BeginNextEvent();
+        else cafeSceneManager.DisplayDialog("This isn't what I ordered.");
         ClearCoffee();
     }
     

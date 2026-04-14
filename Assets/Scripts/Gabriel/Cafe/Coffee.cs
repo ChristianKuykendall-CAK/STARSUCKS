@@ -56,11 +56,9 @@ public class Coffee
         // Add space before capital letters
         string withSpaces = Regex.Replace(raw, "(\\B[A-Z])", " $1");
 
-        withSpaces = withSpaces.Replace("plus", "+");
-        withSpaces = withSpaces.Replace("minus", "-");
-
+        return withSpaces.ToLower();
         // Capitalize first letter
-        return char.ToUpper(withSpaces[0]) + withSpaces.Substring(1);
+        // return char.ToUpper(withSpaces[0]) + withSpaces.Substring(1);
     }
 
     public static string ReplaceSymbols(System.Enum value)
