@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      iv-bag-icon-image-JF0GM8_0: 2255908416889554190
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

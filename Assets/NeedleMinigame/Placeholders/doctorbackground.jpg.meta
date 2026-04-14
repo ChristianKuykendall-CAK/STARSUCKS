@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      doctorbackground_0: 6586724544493796098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

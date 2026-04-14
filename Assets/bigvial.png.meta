@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c5484b98b58ced0439f3032225290f35
+guid: 4e6cf796e323db448909667f4c974997
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1784205716024546507
-    second: curtain_0
+      213: -5869210907047008293
+    second: bigvial_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: curtain_0
+      name: bigvial_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 10
-        width: 511
-        height: 630
+        x: 208
+        y: 42
+        width: 124
+        height: 470
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53ba22aba5a3d37e0800000000000000
-      internalID: -1784205716024546507
+      spriteID: bd76d95c6cf5c8ea0800000000000000
+      internalID: -5869210907047008293
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      curtain_0: -1784205716024546507
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

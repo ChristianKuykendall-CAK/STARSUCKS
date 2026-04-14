@@ -7,6 +7,10 @@ TagManager:
   - Vein
   - Patient
   - Arm
+  - Green
+  - Yellow
+  - Border
+  - Red
   layers:
   - Default
   - TransparentFX
