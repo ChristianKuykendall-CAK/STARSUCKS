@@ -67,6 +67,9 @@ public class CafeSceneManager : MonoBehaviour
         _customerImage = customerImageObject.GetComponent<Image>();
         _customerImageTransform = customerImageObject.GetComponent<RectTransform>();
 
+        dialogTextBox.SetActive(false);
+        nameTextBox.SetActive(false);
+
         GenerateDailyEvents();
 
         BeginNextEvent();
@@ -97,6 +100,8 @@ public class CafeSceneManager : MonoBehaviour
 
     private IEnumerator NextEvent()
     {
+        _dialogText.text = "Thank you!";
+
         if (_customerImage.sprite != null) yield return StartCoroutine("CustomerExit");
 
         if ((bool)dailyEvents.Dequeue()) {
@@ -152,7 +157,8 @@ public class CafeSceneManager : MonoBehaviour
     }
 
     public void DisplayDialog(string newDialogText)
-    {
+    {   
+        dialogTextBox.SetActive(true);
         if (currentlyTyping != null) StopCoroutine(currentlyTyping);
         currentlyTyping = StartCoroutine(TypeDialog(newDialogText));
     }
