@@ -20870,9 +20870,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 865208129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 9138a51e4757955418fd29b72dd075ea, type: 3}
   m_Name: CustomerEnterPoint
   m_EditorClassIdentifier: 
+  textDownAmt: 12
+  isInteractable: 1
 --- !u!1 &870857325
 GameObject:
   m_ObjectHideFlags: 0
