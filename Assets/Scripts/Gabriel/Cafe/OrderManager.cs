@@ -33,6 +33,7 @@ public class OrderManager : MonoBehaviour
 
     public void SetOrderByGirlIndex(int girlIndex) {
         currentOrder = MainGirlOrders[girlIndex];
+        cafeSceneManager.DisplayPaperOrder(currentOrder.GetPrintDetails());
     }
 
     public string GetOrderString()
