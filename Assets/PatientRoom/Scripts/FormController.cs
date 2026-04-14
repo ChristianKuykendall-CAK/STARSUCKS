@@ -19,6 +19,9 @@ public class FormController : MonoBehaviour
     private float patientBloodAmount;
     private string patientBloodType;
 
+    public Sprite patientFrontHair;
+    public Sprite patientBackHair;
+
 
     void Awake()
     {
@@ -76,6 +79,9 @@ public class FormController : MonoBehaviour
             }
         }
         NeedleMinigameManager.instance.SetNervousness(patient.nervousness);
+        patientFrontHair = patient.patient_frontHair.sprite;
+        patientBackHair = patient.patient_backHair.sprite;
+
     }
 
     public void ClearForm()
