@@ -110,10 +110,11 @@ public class CafeSceneManager : MonoBehaviour
             orderManager.GenerateNewOrder();
         }
         else {
+            Debug.Log("Hello");
             ToggleButtonsActive();
             yield return StartCoroutine(CustomerEnter(girls[currentGirlIndex].sprite));
             DisplayCurrentGirlName();
-            inkManager.DisplayDialog(currentGirlIndex);
+            inkManager.BeginMainGirlDialog(currentGirlIndex);
             orderManager.SetOrderByGirlIndex(currentGirlIndex);
             currentGirlIndex++;
         }
@@ -158,7 +159,7 @@ public class CafeSceneManager : MonoBehaviour
 
     public void DisplayDialog(string newDialogText)
     {   
-        dialogTextBox.SetActive(true);
+        if (!dialogTextBox.activeInHierarchy) dialogTextBox.SetActive(true);
         if (currentlyTyping != null) StopCoroutine(currentlyTyping);
         currentlyTyping = StartCoroutine(TypeDialog(newDialogText));
     }

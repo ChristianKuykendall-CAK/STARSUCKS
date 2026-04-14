@@ -18,13 +18,10 @@ public class InkManager : MonoBehaviour
 
     private Story story;
 
-    void Start()
+    public void BeginMainGirlDialog(int currentGirlIndex)
     {
         story = new Story(inkJSONAsset.text);
-    }
 
-    public void DisplayDialog(int currentGirlIndex)
-    {
         story.variablesState["girl"] = currentGirlIndex + 1;
         story.variablesState["day"] = GameManager.instance.GetCurrentDay();
 
@@ -41,8 +38,9 @@ public class InkManager : MonoBehaviour
 
     public void ShowProgressionOption()
     {
-        if (story.currentChoices.Count > 0)
-            {
+        if (story != null)
+        {
+            if (story.currentChoices.Count > 0) {
                 foreach (var choice in story.currentChoices)
                 {
                     Button newButton = Instantiate(choiceButtonPrefab, choiceButtonContainer);
@@ -55,8 +53,7 @@ public class InkManager : MonoBehaviour
                     });
                 }
             }
-            else if (story.canContinue)
-            {
+            else if (story.canContinue) {
                 Button newButton = Instantiate(choiceButtonPrefab, choiceButtonContainer);
                 newButton.GetComponentInChildren<TMP_Text>().text = "...";
                 newButton.onClick.AddListener(() =>
@@ -67,8 +64,10 @@ public class InkManager : MonoBehaviour
             }
             else {
                 cafeSceneManager.ToggleButtonsActive();
+                story = null;
                 return;
             }
+        }
     }
 
     void DestroyButtons()
