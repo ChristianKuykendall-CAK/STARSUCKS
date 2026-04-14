@@ -8,13 +8,11 @@ public class CupSizes : MonoBehaviour
 
     public Transform CupSpawner;
     public GameObject currentCup;
-    private GameObject cupLid;
     private GameObject straw;
 
     public GameObject Small;
     public GameObject Medium;
     public GameObject Large;
-    public GameObject Lid;
     public GameObject Straw;
 
     void Awake()
@@ -53,14 +51,6 @@ public class CupSizes : MonoBehaviour
         } 
     }
 
-    public void SpawnLid()
-    {
-        if (cupLid == null)
-        {
-            cupLid = Instantiate(Lid, CupSpawner);
-            cupLid.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-        } 
-    }
 
     public void SpawnStraw()
     {
