@@ -1,5 +1,6 @@
 using Ink.Runtime;
 using TMPro;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,7 @@ public class InkManager : MonoBehaviour
 
     [Header("Ink")]
     public TextAsset inkJSONAsset;
-    private Story story;
+    public Story story;
 
     [Header("Prefabs")]
     public Button choiceButtonPrefab;
@@ -18,31 +19,24 @@ public class InkManager : MonoBehaviour
     public Transform choiceButtonContainer;
 
     [Header("Gameplay Variables")]
-    public string girl1Name = "Madaleine";
-    public string girl2Name = "Priscilla";
-    public string girl3Name = "Guinevere";
-    public int girl = 1;
     public int day = 1;
 
-    void Start()
+    public void DisplayDialog(int currentGirlIndex)
     {
-        // Load the compiled JSON asset into the Story object
         story = new Story(inkJSONAsset.text);
-    }
 
-    public void DisplayDialog()
-    {
-        story.variablesState["girl"] = girl;
-        story.variablesState["day"] = day;
-
-        cafeSceneManager.DisplayName(girl == 1 ? girl1Name : girl == 2 ? girl2Name : girl3Name);
+        story.variablesState["girl"] = currentGirlIndex + 1;
+        story.variablesState["day"] = GameManager.instance.GetCurrentDay();
 
         RefreshStory();
     }
 
     void RefreshStory()
     {
-        if (!story.canContinue) return;
+        if (!story.canContinue) {
+            cafeSceneManager.ToggleButtonsActive();
+            return;
+        }
 
         cafeSceneManager.DisplayDialog(story.Continue());
 

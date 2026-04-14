@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class Button_Controller : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
@@ -9,6 +8,7 @@ public class Button_Controller : MonoBehaviour, IPointerDownHandler, IPointerUpH
     TMP_Text textComponent;
     Vector3 startPos;
     Vector3 downPos;
+    public bool isInteractable = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +27,7 @@ public class Button_Controller : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        textComponent.rectTransform.position = downPos;
+        if (isInteractable)
+            textComponent.rectTransform.position = downPos;
     }
 }

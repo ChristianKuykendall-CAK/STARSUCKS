@@ -5,6 +5,7 @@ using TMPro;
 public class CoffeeBuilder : MonoBehaviour
 {
     public static CoffeeBuilder instance;
+    public CafeSceneManager cafeSceneManager;
     public Coffee coffee;
     public int snappedObjCount = 0;
 
@@ -39,7 +40,8 @@ public class CoffeeBuilder : MonoBehaviour
         bool isCorrect;
         isCorrect = OrderManager.instance.CompareCoffeeToOrder(coffee);
         if (snappedObjCount < 2) isCorrect = false;
-        GameObject.Find("TestTest").GetComponent<TMP_Text>().text = isCorrect ? "" : "Aw man, no.";
+        if (isCorrect) cafeSceneManager.BeginNextEvent();
+        ClearCoffee();
     }
     
     public void ClearCoffee()

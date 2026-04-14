@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
-using Ink.Runtime;
 
 public class CafeSceneManager : MonoBehaviour
 {
@@ -20,15 +19,30 @@ public class CafeSceneManager : MonoBehaviour
     public GameObject bloodToppings;
     public GameObject normalCafe;
     public GameObject paperOrder;
+    public GameObject customerImageObject;
+    public GameObject choiceButtonContainer;
+    public Button createButton;
+    public Button serveButton;
+
+    [Header("Girls")]
+    public Girl[] girls;
+
+    [Header("Customer")]
+    public string randCustomerNamePlaceholder = "Customer";
+    public Sprite randCustomerImage;
+    public RectTransform customerEnterPoint;
+    public RectTransform customerOrderPoint;
+    public RectTransform customerExitPoint;
 
     [Header("Gameplay Variables")]
     public int numRandOrdersBetweenGirls = 2;
-
     private TMP_Text _dialogText;
     private TMP_Text _nameText;
     private TMP_Text _orderPaperText;
     private Queue dailyEvents;
     private int currentGirlIndex;
+    private Image _customerImage;
+    private RectTransform _customerImageTransform;
 
 
     
@@ -48,9 +62,12 @@ public class CafeSceneManager : MonoBehaviour
 
         dailyEvents = new Queue();
 
+        _customerImage = customerImageObject.GetComponent<Image>();
+        _customerImageTransform = customerImageObject.GetComponent<RectTransform>();
+
         GenerateDailyEvents();
 
-        NextEvent();
+        BeginNextEvent();
     }
 
     void GenerateDailyEvents()
@@ -71,15 +88,64 @@ public class CafeSceneManager : MonoBehaviour
         }
     }
 
-    public void NextEvent()
+    public void BeginNextEvent()
     {
+        StartCoroutine("NextEvent");
+    }
+
+    private IEnumerator NextEvent()
+    {
+        if (_customerImage.sprite != null) yield return StartCoroutine("CustomerExit");
+
         if ((bool)dailyEvents.Dequeue()) {
+            yield return StartCoroutine(CustomerEnter(randCustomerImage));
+            DisplayCustomerName();
             orderManager.GenerateNewOrder();
         }
         else {
-            inkManager.DisplayDialog();
+            ToggleButtonsActive();
+            yield return StartCoroutine(CustomerEnter(girls[currentGirlIndex].sprite));
+            DisplayCurrentGirlName();
+            inkManager.DisplayDialog(currentGirlIndex);
             orderManager.SetOrderByGirlIndex(currentGirlIndex);
             currentGirlIndex++;
+        }
+    }
+
+    public void ToggleButtonsActive()
+    {
+        createButton.interactable = !createButton.interactable;
+        createButton.GetComponent<Button_Controller>().isInteractable = createButton.interactable;
+
+        serveButton.interactable = !serveButton.interactable;
+        serveButton.GetComponent<Button_Controller>().isInteractable = serveButton.interactable;
+    }
+
+    public IEnumerator CustomerEnter(Sprite sprite)
+    {
+        _customerImage.sprite = sprite;
+
+        float i = 0;
+        while (i <= 1) {
+            Vector3 currentPos = Vector3.Lerp(customerEnterPoint.position, customerOrderPoint.position, i);
+
+            _customerImageTransform.position = currentPos;
+
+            i += 0.02f;
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+    public IEnumerator CustomerExit()
+    {
+        float i = 0;
+        while (i <= 1) {
+            Vector3 currentPos = Vector3.Lerp(customerOrderPoint.position, customerExitPoint.position, i);
+
+            _customerImageTransform.position = currentPos;
+
+            i += 0.01f;
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
@@ -88,9 +154,14 @@ public class CafeSceneManager : MonoBehaviour
         _dialogText.text = newDialogText;
     }
 
-    public void DisplayName(string newNameText)
+    public void DisplayCustomerName()
     {
-        _nameText.text = newNameText;
+        _nameText.text = randCustomerNamePlaceholder;
+    }
+
+    public void DisplayCurrentGirlName()
+    {
+        _nameText.text = girls[currentGirlIndex].name;
     }
 
     public void DisplayPaperOrder(string newOrderText)
@@ -106,6 +177,7 @@ public class CafeSceneManager : MonoBehaviour
         paperOrder.SetActive(true);
         dialogTextBox.SetActive(false);
         nameTextBox.SetActive(false);
+        choiceButtonContainer.SetActive(false);
     }
 
     public void SwitchBlood()
@@ -116,6 +188,7 @@ public class CafeSceneManager : MonoBehaviour
         paperOrder.SetActive(true);
         dialogTextBox.SetActive(false);
         nameTextBox.SetActive(false);
+        choiceButtonContainer.SetActive(false);
     }
 
     public void SwitchToCafe()
@@ -126,5 +199,13 @@ public class CafeSceneManager : MonoBehaviour
         paperOrder.SetActive(false);
         dialogTextBox.SetActive(true);
         nameTextBox.SetActive(true);
+        choiceButtonContainer.SetActive(true);
     }
+}
+
+[System.Serializable]
+public class Girl
+{
+    public string name;
+    public Sprite sprite;
 }

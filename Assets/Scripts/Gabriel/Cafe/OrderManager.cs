@@ -27,7 +27,6 @@ public class OrderManager : MonoBehaviour
     public void GenerateNewOrder()
     {
         Coffee.Randomize(currentOrder);
-        cafeSceneManager.DisplayName("Customer");
         cafeSceneManager.DisplayDialog(GetOrderString());
         cafeSceneManager.DisplayPaperOrder(currentOrder.GetPrintDetails());
     }
@@ -53,11 +52,8 @@ public class OrderManager : MonoBehaviour
             coffee.bloodType == currentOrder.bloodType &&
             coffee.topping == currentOrder.topping &&
             coffee.size == currentOrder.size
-            ) /* then */
-        {
-            isCorrect = true;
-            cafeSceneManager.NextEvent();
-        }
+            ) /* then */ isCorrect = true;
+
         return isCorrect;
     }
 }
