@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class CurtainController : MonoBehaviour
 {
-    private Transform tf;
+    private RectTransform tf;
     private Vector3 origPos;
-    public Transform newPos;
+    public RectTransform newPos;
     public AnimationCurve curve;
     public int moveSpeed;
     public GameObject fade;
@@ -13,8 +13,14 @@ public class CurtainController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        tf = GetComponent<Transform>();
-        origPos = transform.localPosition;
+        tf = GetComponent<RectTransform>();
+        origPos = tf.position;
+        Debug.Log(origPos);
+    }
+
+    public void CurtainMove()
+    {
+        StartCoroutine(MoveCurtain());
     }
 
     // Update is called once per frame

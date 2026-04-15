@@ -10,8 +10,10 @@ public class HeartController : MonoBehaviour
     private PlayerInput pi;
     public float speed;
     private Rigidbody2D rb;
-    public GameObject faces;
-    public Sprite[] facesSprites;
+    public GameObject mouth;
+    public GameObject eyes;
+    public Sprite[] mouthSprites;
+    public Sprite[] eyeSprites;
 
 
     private void Awake()
@@ -61,15 +63,15 @@ public class HeartController : MonoBehaviour
     {
         if (collision.CompareTag("Yellow"))
         {
-            faces.GetComponent<SpriteRenderer>().sprite = facesSprites[0];
+            mouth.GetComponent<SpriteRenderer>().sprite = mouthSprites[0];
         }
         else if (collision.CompareTag("Green"))
         {
-            faces.GetComponent<SpriteRenderer>().sprite = facesSprites[1];
+            mouth.GetComponent<SpriteRenderer>().sprite = mouthSprites[1];
         }
         else if (collision.CompareTag("Red"))
         {
-            faces.GetComponent<SpriteRenderer>().sprite = facesSprites[2];
+            mouth.GetComponent<SpriteRenderer>().sprite = mouthSprites[2];
         }
     }
 
