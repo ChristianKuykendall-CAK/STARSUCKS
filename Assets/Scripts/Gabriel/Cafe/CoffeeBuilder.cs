@@ -34,6 +34,7 @@ public class CoffeeBuilder : MonoBehaviour
         coffee.size = sizeChoice;
     }
 
+
     public void SubmitOrder()
     {
         bool isCorrect;
@@ -49,5 +50,10 @@ public class CoffeeBuilder : MonoBehaviour
         coffee = new Coffee();
         snappedObjCount = 0;
         Destroy(CupSizes.instance.currentCup);
+    }
+
+    public void AddCoffee()
+    {
+        coffee.hasCoffee=true;
     }
 }

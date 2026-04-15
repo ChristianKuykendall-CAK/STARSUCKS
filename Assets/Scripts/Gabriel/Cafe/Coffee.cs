@@ -14,12 +14,15 @@ public class Coffee
     [SerializeField] private CoffeeOptions.Sizes _size;
     public CoffeeOptions.Sizes size { get { return _size; } set { _size = value; } }
 
+    public bool hasCoffee;
+
     public Coffee()
     {
         _temp = 0;
         _bloodType = 0;
         _topping = 0;
         _size = 0;
+        hasCoffee = false;
     }
 
     public static Coffee Randomize(Coffee coffee)

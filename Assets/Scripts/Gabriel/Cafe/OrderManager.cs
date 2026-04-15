@@ -51,7 +51,8 @@ public class OrderManager : MonoBehaviour
             coffee.temp == currentOrder.temp &&
             coffee.bloodType == currentOrder.bloodType &&
             coffee.topping == currentOrder.topping &&
-            coffee.size == currentOrder.size
+            coffee.size == currentOrder.size &&
+            coffee.hasCoffee
             ) /* then */ isCorrect = true;
 
         return isCorrect;
