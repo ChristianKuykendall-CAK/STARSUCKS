@@ -1,3 +1,5 @@
+using Unity.XR.GoogleVr;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -25,6 +27,25 @@ public class GameManager : MonoBehaviour
     public int GetCurrentDay()
     {
         return currentDay;
+    }
+
+    public void GoToNextScene(bool progressDay = false)
+    {
+        if (progressDay) {
+            currentDay++;
+
+            if (currentDay > 3)
+            {
+                // TODO go to ending scene
+            }
+            // TODO go to blood drive.
+            Debug.Log("Go to blood drive");
+        }
+        else
+        {
+            // TODO go to cafe scene.
+            Debug.Log("Go to the cafe");
+        }
     }
 }
 

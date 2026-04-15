@@ -1,6 +1,5 @@
 VAR MadaleineMentioned = false
 
-
 ===Madeleine===
 
 = day1

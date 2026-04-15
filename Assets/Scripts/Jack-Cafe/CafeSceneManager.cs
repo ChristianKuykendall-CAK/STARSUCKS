@@ -103,19 +103,24 @@ public class CafeSceneManager : MonoBehaviour
 
         if (_customerImage.sprite != null) yield return StartCoroutine("CustomerExit");
 
-        if ((bool)dailyEvents.Dequeue()) {
-            yield return StartCoroutine(CustomerEnter(randCustomerImage));
-            DisplayCustomerName();
-            orderManager.GenerateNewOrder();
+        if (dailyEvents.Count > 0) {
+            if ((bool)dailyEvents.Dequeue()) {
+                yield return StartCoroutine(CustomerEnter(randCustomerImage));
+                DisplayCustomerName();
+                orderManager.GenerateNewOrder();
+            }
+            else {
+                ToggleButtonsActive();
+                yield return StartCoroutine(CustomerEnter(GameManager.instance.girls[currentGirlIndex].sprite));
+                DisplayCustomerName(GameManager.instance.girls[currentGirlIndex].nameKnown ? GameManager.instance.girls[currentGirlIndex].name : "???");
+                inkManager.BeginMainGirlDialog(currentGirlIndex);
+                orderManager.SetOrderByGirlIndex(currentGirlIndex);
+                currentGirlIndex++;
+            }
         }
         else {
-            Debug.Log("Hello");
-            ToggleButtonsActive();
-            yield return StartCoroutine(CustomerEnter(GameManager.instance.girls[currentGirlIndex].sprite));
-            DisplayCustomerName(GameManager.instance.girls[currentGirlIndex].nameKnown ? GameManager.instance.girls[currentGirlIndex].name : "???");
-            inkManager.BeginMainGirlDialog(currentGirlIndex);
-            orderManager.SetOrderByGirlIndex(currentGirlIndex);
-            currentGirlIndex++;
+            Debug.Log("Day is complete");
+            GameManager.instance.GoToNextScene(true);
         }
     }
 
