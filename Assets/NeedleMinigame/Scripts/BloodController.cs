@@ -7,6 +7,7 @@ public class BloodController : MonoBehaviour
     private Slider slider;
     private float minValue;
     public float drainRate = .01f;
+    public float bloodAmount;
    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
