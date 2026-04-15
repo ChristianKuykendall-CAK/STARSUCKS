@@ -3,9 +3,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public Girl[] girls;
 
     private int currentDay;
-    private float[] girlPoints = {0, 0, 0};
     
     void Awake()
     {
@@ -26,4 +26,13 @@ public class GameManager : MonoBehaviour
     {
         return currentDay;
     }
+}
+
+[System.Serializable]
+public class Girl
+{
+    public string name;
+    public bool nameKnown;
+    public int lovePoints;
+    public Sprite sprite;
 }

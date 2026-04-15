@@ -17969,14 +17969,7 @@ MonoBehaviour:
   choiceButtonContainer: {fileID: 1757909678}
   createButton: {fileID: 1464105018}
   serveButton: {fileID: 416560729}
-  girls:
-  - name: Madaleine
-    sprite: {fileID: 21300000, guid: 0812f7f17d63dfe43bdad6ab673e02e6, type: 3}
-  - name: Elizabeth
-    sprite: {fileID: 21300000, guid: 7072eaa53e03522498e031bf8aeb6d0d, type: 3}
-  - name: Guinevere
-    sprite: {fileID: 21300000, guid: f0a5140303d2b7f45b5b166d4f95707d, type: 3}
-  randCustomerNamePlaceholder: Customer
+  currentGirlIndex: 0
   randCustomerImage: {fileID: -1274852683213082923, guid: 348e1eb2b19a1ad48be8231d3106d681, type: 3}
   customerEnterPoint: {fileID: 494134555}
   customerOrderPoint: {fileID: 1507701310}
@@ -50275,6 +50268,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73213da26bb965e438337be84cfdc1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  girls:
+  - name: Madaleine
+    nameKnown: 0
+    lovePoints: 0
+    sprite: {fileID: 21300000, guid: 0812f7f17d63dfe43bdad6ab673e02e6, type: 3}
+  - name: Elizabeth
+    nameKnown: 0
+    lovePoints: 0
+    sprite: {fileID: 21300000, guid: 7072eaa53e03522498e031bf8aeb6d0d, type: 3}
+  - name: Guinevere
+    nameKnown: 0
+    lovePoints: 0
+    sprite: {fileID: 21300000, guid: f0a5140303d2b7f45b5b166d4f95707d, type: 3}
 --- !u!1 &1901383253
 GameObject:
   m_ObjectHideFlags: 0

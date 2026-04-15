@@ -1,8 +1,10 @@
+VAR GuinevereMentioned = false
 
 ===Guinevere===
 
 = day1
-Bleh Bleh Bleh
+Bleh Bleh Bleh I'm Guinevere
+~ GuinevereMentioned = true
 -> order
 
 

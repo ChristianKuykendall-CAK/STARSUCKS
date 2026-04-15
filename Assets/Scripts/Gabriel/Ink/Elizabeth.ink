@@ -1,8 +1,10 @@
+VAR ElizabethMentioned = false
 
 ===Elizabeth===
 
 = day1
-Bleh Bleh Bleh
+Bleh Bleh Bleh I'm Elizabeth
+~ ElizabethMentioned = true
 -> order
 
 

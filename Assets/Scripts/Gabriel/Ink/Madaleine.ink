@@ -1,3 +1,5 @@
+VAR MadaleineMentioned = false
+
 
 ===Madeleine===
 
@@ -10,14 +12,21 @@ Hey! how are you today?
 -> order
 
 - (howAboutYou)
-I'm good! Thanks for asking. 
+~ lovePointsEarned = lovePointsEarned + 1
+I'm good! Thanks for asking.
 How long have you been working here? I don't think I've seen you before.
-* [I just started recently.]
+    * [Probably because you're blind] -> blindLol
+    * [I just started recently.]
 - That explains it.
 Well it's nice to meet you! My name is Madaleine.
-* [Nice to meet you too!]
+~ MadaleineMentioned = true
+    * [Nice to meet you too!]
 -> order
 
+- (blindLol)
+~ lovePointsEarned = lovePointsEarned - 1
+Um, okay...
+-> order
 
 
 
