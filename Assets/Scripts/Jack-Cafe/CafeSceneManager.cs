@@ -25,10 +25,10 @@ public class CafeSceneManager : MonoBehaviour
     public Button serveButton;
 
     [Header("Girls")]
-    public Girl[] girls;
+    public int currentGirlIndex;
 
     [Header("Customer")]
-    public string randCustomerNamePlaceholder = "Customer";
+    public const string randCustomerNamePlaceholder = "Customer";
     public Sprite randCustomerImage;
     public RectTransform customerEnterPoint;
     public RectTransform customerOrderPoint;
@@ -41,7 +41,6 @@ public class CafeSceneManager : MonoBehaviour
     private TMP_Text _nameText;
     private TMP_Text _orderPaperText;
     private Queue dailyEvents;
-    private int currentGirlIndex;
     private Image _customerImage;
     private RectTransform _customerImageTransform;
     private Coroutine currentlyTyping;
@@ -112,8 +111,8 @@ public class CafeSceneManager : MonoBehaviour
         else {
             Debug.Log("Hello");
             ToggleButtonsActive();
-            yield return StartCoroutine(CustomerEnter(girls[currentGirlIndex].sprite));
-            DisplayCurrentGirlName();
+            yield return StartCoroutine(CustomerEnter(GameManager.instance.girls[currentGirlIndex].sprite));
+            DisplayCustomerName(GameManager.instance.girls[currentGirlIndex].nameKnown ? GameManager.instance.girls[currentGirlIndex].name : "???");
             inkManager.BeginMainGirlDialog(currentGirlIndex);
             orderManager.SetOrderByGirlIndex(currentGirlIndex);
             currentGirlIndex++;
@@ -181,14 +180,10 @@ public class CafeSceneManager : MonoBehaviour
         if (_nameText.text != randCustomerNamePlaceholder) inkManager.ShowProgressionOption();
     }
 
-    public void DisplayCustomerName()
+    public void DisplayCustomerName(string customerName = randCustomerNamePlaceholder)
     {
-        _nameText.text = randCustomerNamePlaceholder;
-    }
-
-    public void DisplayCurrentGirlName()
-    {
-        _nameText.text = girls[currentGirlIndex].name;
+        if (!nameTextBox.activeInHierarchy) nameTextBox.SetActive(true);
+        _nameText.text = customerName;
     }
 
     public void DisplayPaperOrder(string newOrderText)
@@ -228,11 +223,4 @@ public class CafeSceneManager : MonoBehaviour
         nameTextBox.SetActive(true);
         choiceButtonContainer.SetActive(true);
     }
-}
-
-[System.Serializable]
-public class Girl
-{
-    public string name;
-    public Sprite sprite;
 }

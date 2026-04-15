@@ -5,6 +5,8 @@ INCLUDE Guinevere.ink
 VAR girl = 1
 VAR day = 1
 
+VAR lovePointsEarned = 0
+
 // Story redirector
 {girl:
     // Madaleine dialogs

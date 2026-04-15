@@ -9,12 +9,6 @@ public class CoffeeBuilder : MonoBehaviour
     public Coffee coffee;
     public int snappedObjCount = 0;
 
-    void Awake()
-    {
-        if (instance == null) instance = this;
-        else Destroy(gameObject);
-    }
-
     public void SetTemp(CoffeeOptions.Temps tempChoice)
     {
         coffee.temp = tempChoice;

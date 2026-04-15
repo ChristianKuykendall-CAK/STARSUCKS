@@ -17,9 +17,12 @@ public class InkManager : MonoBehaviour
     public Transform choiceButtonContainer;
 
     private Story story;
+    private int currentGirlIndex;
 
-    public void BeginMainGirlDialog(int currentGirlIndex)
+    public void BeginMainGirlDialog(int girlIndex)
     {
+        currentGirlIndex = girlIndex;
+
         story = new Story(inkJSONAsset.text);
 
         story.variablesState["girl"] = currentGirlIndex + 1;
@@ -36,10 +39,32 @@ public class InkManager : MonoBehaviour
         }
     }
 
+    void UpdateNameKnown()
+    {
+        GameManager.instance.girls[currentGirlIndex].nameKnown = true;
+        cafeSceneManager.DisplayCustomerName(GameManager.instance.girls[currentGirlIndex].name);
+    }
+
     public void ShowProgressionOption()
     {
         if (story != null)
         {
+            switch (currentGirlIndex)
+            {
+                case 0:
+                    if (!GameManager.instance.girls[currentGirlIndex].nameKnown && (bool)story.variablesState["MadaleineMentioned"])
+                        UpdateNameKnown();
+                    break;
+                case 1:
+                    if (!GameManager.instance.girls[currentGirlIndex].nameKnown && (bool)story.variablesState["ElizabethMentioned"])
+                        UpdateNameKnown();
+                    break;
+                case 2:
+                    if (!GameManager.instance.girls[currentGirlIndex].nameKnown && (bool)story.variablesState["GuinevereMentioned"])
+                        UpdateNameKnown();
+                    break;
+            }
+
             if (story.currentChoices.Count > 0) {
                 foreach (var choice in story.currentChoices)
                 {
@@ -63,6 +88,7 @@ public class InkManager : MonoBehaviour
                 });
             }
             else {
+                GameManager.instance.girls[currentGirlIndex].lovePoints += (int)story.variablesState["lovePointsEarned"];
                 cafeSceneManager.ToggleButtonsActive();
                 story = null;
                 return;

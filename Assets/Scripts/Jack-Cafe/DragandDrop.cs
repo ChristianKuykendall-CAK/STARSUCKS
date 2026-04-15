@@ -38,7 +38,6 @@ public class DragandDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (!snapped) {
             rb.MovePosition(Mouse.current.position.ReadValue());
         }
-
     }
 
     public void OnEndDrag(PointerEventData eventData)
