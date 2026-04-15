@@ -8,6 +8,11 @@ public class CoffeeBuilder : MonoBehaviour
     public CafeSceneManager cafeSceneManager;
     public Coffee coffee;
     public int snappedObjCount = 0;
+    
+    public void Awake()
+    {
+        if (instance == null) instance = this;
+    }
 
     public void SetTemp(CoffeeOptions.Temps tempChoice)
     {
