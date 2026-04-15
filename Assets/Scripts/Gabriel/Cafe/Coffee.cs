@@ -49,7 +49,7 @@ public class Coffee
         string bloodTypeDisplay = _bloodType.ToString().Replace("plus", "+").Replace("minus", "-");
         string toppingDisplay = ToDisplayString(topping);
 
-        return $"Coffee Details:\nSize: {sizeDisplay}\nTemp: {tempDisplay}\nBlood Type: {bloodTypeDisplay}\nTopping: {toppingDisplay}";
+        return $"Customer Order:\nSize: {sizeDisplay}\nTemp: {tempDisplay}\nBlood Type: {bloodTypeDisplay}\nTopping: {toppingDisplay}";
     }
 
     public static string ToDisplayString(System.Enum value)
