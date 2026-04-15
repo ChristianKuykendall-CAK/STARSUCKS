@@ -6,6 +6,16 @@ public class ClinicManager : MonoBehaviour
     public static ClinicManager instance;
     public Scene bloodExtractionScene;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
         

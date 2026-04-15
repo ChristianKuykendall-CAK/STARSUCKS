@@ -15,6 +15,7 @@ public class ArmController : MonoBehaviour
     void Start()
     {
         tf = GetComponent<Transform>();
+        frequency = NeedleMinigameManager.instance.GetNervousness();
         origPos = tf.position;        
     }
 
