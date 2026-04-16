@@ -8,7 +8,6 @@ public class CafeTutorial : MonoBehaviour
     bool tutorialFinished = false;
     public GameObject MainGame;
 
-
     public void NextStep()
     {
         if (counter < parts.Length)

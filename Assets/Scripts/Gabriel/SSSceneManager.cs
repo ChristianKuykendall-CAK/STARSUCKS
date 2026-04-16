@@ -23,21 +23,21 @@ public class SSSceneManager : MonoBehaviour
 
     public void GoToCurrentScene()
     {
-        SceneManager.LoadScene(sceneNames[currentSceneindex]);
+        SceneManager.LoadScene(sceneNames[sceneOrder[currentSceneindex]]);
     }
 
     public void GoToNextScene()
     {
-        SceneManager.LoadScene(sceneNames[++currentSceneindex]);
+        SceneManager.LoadScene(sceneNames[sceneOrder[++currentSceneindex]]);
     }
 
     public void GoToSceneAtIndex(int index)
     {
-        SceneManager.LoadScene(sceneNames[index]);
+        SceneManager.LoadScene(sceneNames[sceneOrder[index]]);
     }
 
     public int GetCurrentDay()
     {
-        return currentSceneindex % 2;
+        return currentSceneindex / 2;
     }
 }

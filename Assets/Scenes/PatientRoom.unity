@@ -821,6 +821,8 @@ MonoBehaviour:
   nameText: {fileID: 1501128991}
   bloodTypeText: {fileID: 1552573281}
   commentsText: {fileID: 693475893}
+  patientFrontHair: {fileID: 0}
+  patientBackHair: {fileID: 0}
 --- !u!114 &842940120
 MonoBehaviour:
   m_ObjectHideFlags: 0

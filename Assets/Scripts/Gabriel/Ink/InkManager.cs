@@ -26,7 +26,7 @@ public class InkManager : MonoBehaviour
         story = new Story(inkJSONAsset.text);
 
         story.variablesState["girl"] = currentGirlIndex + 1;
-        story.variablesState["day"] = GameManager.instance.GetCurrentDay();
+        story.variablesState["day"] = SSSceneManager.instance.GetCurrentDay();
 
         ProgressStory();
     }

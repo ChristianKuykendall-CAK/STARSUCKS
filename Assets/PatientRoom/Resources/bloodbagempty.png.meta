@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bloodbagempty_0: 7750302316911599925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

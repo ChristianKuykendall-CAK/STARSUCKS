@@ -1,8 +1,5 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class NeedleController : MonoBehaviour
 {
