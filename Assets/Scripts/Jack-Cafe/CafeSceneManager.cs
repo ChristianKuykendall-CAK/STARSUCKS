@@ -46,6 +46,8 @@ public class CafeSceneManager : MonoBehaviour
     private Coroutine currentlyTyping;
 
 
+
+
     
     void Awake()
     {
@@ -68,6 +70,8 @@ public class CafeSceneManager : MonoBehaviour
 
         dialogTextBox.SetActive(false);
         nameTextBox.SetActive(false);
+
+        
 
         GenerateDailyEvents();
 
