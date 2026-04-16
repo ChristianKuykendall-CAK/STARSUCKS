@@ -13,10 +13,4 @@ public class PatientDisplayManager : MonoBehaviour
         frontHair.sprite = FormController.instance.patientFrontHair;
         backHair.sprite = FormController.instance.patientBackHair;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

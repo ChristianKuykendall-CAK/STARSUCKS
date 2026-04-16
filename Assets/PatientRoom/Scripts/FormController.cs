@@ -16,12 +16,13 @@ public class FormController : MonoBehaviour
 
     //Values for minigame
     private float patientNervousness;
-    private float patientBloodAmount;
+    public float patientBloodAmount;
     private string patientBloodType;
 
     public Sprite patientFrontHair;
     public Sprite patientBackHair;
 
+    public GameObject spawner; 
 
     void Awake()
     {
@@ -44,6 +45,7 @@ public class FormController : MonoBehaviour
         MovePage();
         nameText.text = patient.patientName;
         bloodTypeText.text = patient.bloodType;
+        patientBloodAmount = patient.bloodAmount;
         //hints about nervousness
         if (!patient.isSelected)
         {
@@ -65,11 +67,11 @@ public class FormController : MonoBehaviour
             }
 
             //hints about blood amount
-            if (patient.bloodAmount < 100)
+            if (patientBloodAmount < 100)
             {
                 commentsText.text += "A disappointing source of blood.\n";
             }
-            else if (patient.nervousness >= 100 && patient.nervousness < 200)
+            else if (patientBloodAmount >= 100 && patientBloodAmount < 200)
             {
                 commentsText.text += "A good source of blood.\n";
             }
@@ -81,7 +83,6 @@ public class FormController : MonoBehaviour
         NeedleMinigameManager.instance.SetNervousness(patient.nervousness);
         patientFrontHair = patient.patient_frontHair.sprite;
         patientBackHair = patient.patient_backHair.sprite;
-
     }
 
     public void ClearForm()

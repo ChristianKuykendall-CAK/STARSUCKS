@@ -5,9 +5,10 @@ public class HeartController : MonoBehaviour
 {
     private Transform tf;
     private bool canMove;
-    private PlayerInput pi;
+    private float fillSpeed;
     public float speed;
     private Rigidbody2D rb;
+    public GameObject vial;
     public GameObject mouth;
     public GameObject eyes;
     public Sprite[] mouthSprites;
@@ -16,7 +17,7 @@ public class HeartController : MonoBehaviour
 
     private void Awake()
     {
-        pi = GetComponent<PlayerInput>();
+        fillSpeed = 0.01f;
         tf = transform;
         rb = GetComponent<Rigidbody2D>();
         
@@ -25,6 +26,11 @@ public class HeartController : MonoBehaviour
     private void OnEnable()
     {
         canMove = true;
+    }
+
+    private void OnDisable()
+    {
+        canMove = false;
     }
 
     private void FixedUpdate()
@@ -51,10 +57,14 @@ public class HeartController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (canMove)
         {
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f);
-            rb.AddForce(Vector2.up * speed, ForceMode2D.Impulse);
+            if (Input.GetMouseButtonDown(0))
+            {
+                rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f);
+                rb.AddForce(Vector2.up * speed, ForceMode2D.Impulse);
+            }
+            vial.GetComponent<BloodController>().fillRate = fillSpeed;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -62,14 +72,17 @@ public class HeartController : MonoBehaviour
         if (collision.CompareTag("Yellow"))
         {
             mouth.GetComponent<SpriteRenderer>().sprite = mouthSprites[0];
+            fillSpeed = .05f;
         }
         else if (collision.CompareTag("Green"))
         {
             mouth.GetComponent<SpriteRenderer>().sprite = mouthSprites[1];
+            fillSpeed = .1f;
         }
         else if (collision.CompareTag("Red"))
         {
             mouth.GetComponent<SpriteRenderer>().sprite = mouthSprites[2];
+            fillSpeed = .01f;
         }
     }
 
