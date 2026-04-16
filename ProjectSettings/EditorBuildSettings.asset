@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NeedleMinigame.unity
     guid: cf50048c83dcc8d43b6bcd2a095925a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BloodExtraction.unity
     guid: 51b520daed7b7cf4f924a63fc442c26c
   - enabled: 0
