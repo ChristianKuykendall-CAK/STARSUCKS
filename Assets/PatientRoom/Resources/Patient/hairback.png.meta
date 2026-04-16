@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 841df2724cef36e438842173b62b4db4
+guid: 2ca627e925d50794c93081ea72b64a19
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 588924371368490732
-    second: mouthSpriteSheet_0
+      213: -7926265370591164848
+    second: hairback_0
   - first:
-      213: -1216195192596975887
-    second: mouthSpriteSheet_1
+      213: -5646906457361076573
+    second: hairback_1
   - first:
-      213: -2989964458596990598
-    second: mouthSpriteSheet_2
+      213: 5361627945435966571
+    second: hairback_2
   - first:
-      213: 975524317237714952
-    second: mouthSpriteSheet_3
+      213: 5089323849801594356
+    second: hairback_3
   - first:
-      213: 6209110920355395884
-    second: mouthSpriteSheet_4
+      213: 189158207676516984
+    second: hairback_4
+  - first:
+      213: 458271210065126191
+    second: hairback_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,111 +115,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mouthSpriteSheet_0
+      name: hairback_0
       rect:
         serializedVersion: 2
-        x: 110
-        y: 70
-        width: 50
-        height: 50
+        x: 0
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ce63df278974c2800800000000000000
-      internalID: 588924371368490732
+      spriteID: 9cd9a3603c4cf4e489df4da4a3b8bac6
+      internalID: 2134037012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouthSpriteSheet_1
+      name: hairback_1
       rect:
         serializedVersion: 2
-        x: 380
-        y: 70
-        width: 50
-        height: 50
+        x: 270
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1fe28bf7ae43f1fe0800000000000000
-      internalID: -1216195192596975887
+      spriteID: 6a90756ae85f81649a276aca90fdf488
+      internalID: 1311783100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouthSpriteSheet_2
+      name: hairback_2
       rect:
         serializedVersion: 2
-        x: 650
-        y: 70
-        width: 50
-        height: 50
+        x: 540
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a71884a9a238186d0800000000000000
-      internalID: -2989964458596990598
+      spriteID: 0b0b2a63083f3914ba4374b5d9311f24
+      internalID: 500238914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouthSpriteSheet_3
+      name: hairback_3
       rect:
         serializedVersion: 2
-        x: 920
-        y: 70
-        width: 50
-        height: 50
+        x: 810
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 800a5bea232c98d00800000000000000
-      internalID: 975524317237714952
+      spriteID: 76941532b71c659488d5aac2a14cb029
+      internalID: -1435078990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouthSpriteSheet_4
+      name: hairback_4
       rect:
         serializedVersion: 2
-        x: 1190
-        y: 70
-        width: 50
-        height: 50
+        x: 1080
+        y: 0
+        width: 270
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c2938ca1c713b2650800000000000000
-      internalID: 6209110920355395884
+      spriteID: e2d87884ccd7de04ead28b379953ed14
+      internalID: 1892550613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hairback_5
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 270
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780e57cf7213f0b41b35396d073adffb
+      internalID: 48749609
       vertices: []
       indices: 
       edges: []
@@ -225,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1e106e94b45203148b7cca2b4ae66431
+    spriteID: 6891b220da4b14c448d06f311a209594
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mouthSpriteSheet_0: 588924371368490732
-      mouthSpriteSheet_1: -1216195192596975887
-      mouthSpriteSheet_2: -2989964458596990598
-      mouthSpriteSheet_3: 975524317237714952
-      mouthSpriteSheet_4: 6209110920355395884
+      hairback_0: 2134037012
+      hairback_1: 1311783100
+      hairback_2: 500238914
+      hairback_3: -1435078990
+      hairback_4: 1892550613
+      hairback_5: 48749609
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

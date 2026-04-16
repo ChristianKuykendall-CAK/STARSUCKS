@@ -20,6 +20,9 @@ public class NeedleController : MonoBehaviour
     private Vector3 origPos;
     public ChanceScript chances;
     public GameObject failureScreen;
+    public GameObject curtain;
+    public GameObject hitEffect;
+
     
     
 
@@ -82,8 +85,10 @@ public class NeedleController : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
 
             Debug.Log("You've hit the vein!");
+
+            StartCoroutine(BeginBloodExtraction());
         }
-        if (collision.gameObject.CompareTag("Arm"))
+        else
         {
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             NeedleMinigameManager.instance.DecreaseChances();
@@ -116,6 +121,18 @@ public class NeedleController : MonoBehaviour
         {
             failureScreen.SetActive(true);
         }
-            
+
+    }
+    IEnumerator BeginBloodExtraction()
+    {
+        yield return new WaitForSeconds(2f);
+        curtain.GetComponent<CurtainController>().CurtainMove();
+    }
+
+    IEnumerator HitEffect()
+    {
+        hitEffect.SetActive(true);
+        yield return new WaitForSeconds(4f);
+        hitEffect.SetActive(false);
     }
 }
