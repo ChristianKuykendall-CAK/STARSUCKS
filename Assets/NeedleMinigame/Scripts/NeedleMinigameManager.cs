@@ -31,7 +31,16 @@ public class NeedleMinigameManager : MonoBehaviour
     {
         return nervousness;
     }
-   
+    public void SetTotalBlood(float amount)
+    {
+        bloodAmount += amount;
+    }
+
+    public float GetTotalBlood()
+    {
+        return bloodAmount;
+    }
+
     public void DecreaseChances()
     {
         --chances;

@@ -12,6 +12,7 @@ public class BloodController : MonoBehaviour
     public float bloodAmount;
     public GameObject success;
     public TMP_Text text;
+    public GameObject goToCafe;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -21,17 +22,14 @@ public class BloodController : MonoBehaviour
     }
     private void OnEnable()
     {
+        goToCafe.SetActive(false);
+        bloodAmount = FormController.instance.patientBloodAmount;
         StartCoroutine(Fill());
     }
 
     private void OnDisable()
     {
         StopCoroutine(Fill());
-    }
-
-    private void Update()
-    {
-
     }
 
     IEnumerator Fill()
@@ -42,6 +40,12 @@ public class BloodController : MonoBehaviour
             yield return new WaitForSeconds(.1f);
         }
         success.SetActive(true);
-        text.text = "You extracted all the blood!";
+        NeedleMinigameManager.instance.SetTotalBlood(bloodAmount);
+        text.text = "You extracted all the blood! \nAmount Extracted: " + bloodAmount + "\nTotal Extracted: " + NeedleMinigameManager.instance.GetTotalBlood();
+        if(NeedleMinigameManager.instance.GetTotalBlood() > 1000)
+        {
+            text.text += "\nYou've collected enough blood! Head to the cafe when you're ready!";
+            goToCafe.SetActive(true);
+        }
     }
 }

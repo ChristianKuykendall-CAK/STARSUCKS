@@ -28,7 +28,7 @@ public class PatientController : MonoBehaviour
     public float nervousness;
     public float bloodAmount;
     public string bloodType;
-    public static int InstanceCount { get; private set; }
+    public static int InstanceCount { get; set; }
 
     private void Start()
     {
@@ -38,21 +38,22 @@ public class PatientController : MonoBehaviour
     private void OnMouseDown()
     {
 
-        if (selectedPatient != null && selectedPatient != this)
+        if (selectedPatient == null)
+        {
+            Select();
+        }
+        else
         {
             selectedPatient.Deselect();
         }
-
-        // Select this object
-        Select();
 
     }
 
     void Select()
     {
+        selectedPatient = this;
         FormController.instance.FillForm(this);
         isSelected = true;
-        selectedPatient = this;
         // Optional: notify UI / info panel
         Debug.Log($"{name} selected");
 
@@ -60,8 +61,9 @@ public class PatientController : MonoBehaviour
     }
     void Deselect()
     {
-        isSelected = false;
+        selectedPatient = null;
         FormController.instance.ClearForm();
+        isSelected = false;
         Debug.Log($"{name} deselected");
     }
 

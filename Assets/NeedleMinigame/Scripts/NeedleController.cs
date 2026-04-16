@@ -97,7 +97,7 @@ public class NeedleController : MonoBehaviour
             Debug.Log("You've missed the vein!");
         }
     }
-    void OnJump()
+    void OnAttack()
     { 
         needleDrop = true;
         StartCoroutine("DropNeedle");

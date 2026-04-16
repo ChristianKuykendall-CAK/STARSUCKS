@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PatientSpawner : MonoBehaviour
 {
+    public static PatientSpawner instance;
+
     public Sprite[] eyes;
     public Sprite[] mouths;
     public Sprite[] frontHairs;
@@ -15,36 +17,50 @@ public class PatientSpawner : MonoBehaviour
 
     public GameObject patientPrefab;
     public int maxPatients = 5;
-    private int currentPatientCount = 0;
+    public int currentPatientCount = 0;
     public float spawnInterval = 5;
-    private float offset = 0;
+    public float offset = 0;
 
 
     void Awake()
     {
-        StartCoroutine(SpawnPatients());
+        if (instance == null)
+            instance = this;
+        else if (instance != this)
+            Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
-    void Start()
+
+    private void Start()
     {
-        offset = 0;
-        currentPatientCount = 0;
+        instance.StopAllCoroutines();
+        instance.StartCoroutine(SpawnPatients());
+    }
+    public void ResetCount()
+    {
+        instance.offset = 0;
+        PatientController.InstanceCount = 0;
+        instance.currentPatientCount = 0;
+        Debug.Log("Count Reset");
+        instance.StartCoroutine(SpawnPatients());
     }
 
     IEnumerator SpawnPatients()
     {
-        while( PatientController.InstanceCount < maxPatients)
+        instance.offset += 1.5f;
+        while (PatientController.InstanceCount < instance.maxPatients)
         {
-            Spawn();
-            currentPatientCount++;
-            yield return new WaitForSeconds(spawnInterval);
+            instance.Spawn();
+            instance.currentPatientCount++;
+            yield return new WaitForSeconds(instance.spawnInterval);
         }
-        offset = 0;
+        instance.offset = 0;
     }
 
     void Spawn()
     {
         System.Random random = new System.Random();
-        offset += 1.5f;
+        PatientSpawner.instance.offset += 1.5f;
 
         float amountBlood = UnityEngine.Random.Range(50f, 300f);
         string[] bloodType = {"AB+", "AB-", "AB", "A+", "A-", "A", "B+", "B-", "B", "O+", "O-", "O" };
