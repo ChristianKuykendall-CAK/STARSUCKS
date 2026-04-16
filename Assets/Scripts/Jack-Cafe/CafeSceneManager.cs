@@ -120,7 +120,7 @@ public class CafeSceneManager : MonoBehaviour
         }
         else {
             Debug.Log("Day is complete");
-            GameManager.instance.GoToNextScene(true);
+            SSSceneManager.instance.GoToNextScene();
         }
     }
 

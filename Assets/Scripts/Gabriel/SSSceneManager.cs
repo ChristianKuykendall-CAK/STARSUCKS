@@ -38,6 +38,6 @@ public class SSSceneManager : MonoBehaviour
 
     public int GetCurrentDay()
     {
-        return currentSceneindex % 2;
+        return currentSceneindex / 2;
     }
 }

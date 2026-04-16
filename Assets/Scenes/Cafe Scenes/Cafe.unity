@@ -18123,7 +18123,7 @@ MonoBehaviour:
   customerOrderPoint: {fileID: 1507701310}
   customerExitPoint: {fileID: 988613214}
   typingSpeed: 2
-  numRandOrdersBetweenGirls: 2
+  numRandOrdersBetweenGirls: 1
 --- !u!4 &739917562
 Transform:
   m_ObjectHideFlags: 0
