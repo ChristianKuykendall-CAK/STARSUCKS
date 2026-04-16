@@ -33,11 +33,6 @@ public class GameManager : MonoBehaviour
     {
         if (progressDay) {
             currentDay++;
-
-            if (currentDay > 3)
-            {
-                // TODO go to ending scene
-            }
             // TODO go to blood drive.
             Debug.Log("Go to blood drive");
         }

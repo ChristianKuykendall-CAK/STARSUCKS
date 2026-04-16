@@ -1,16 +1,17 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenuButtonManager : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("(SS)Backstory");
+        SSSceneManager.instance.GoToCurrentScene();
     }
+
     public void CreditScene()
     {
-
+        // TODO: Make credit panel on main menu scene and toggle it.
     }
+
     public void ExitGame()
     {
 #if UNITY_EDITOR
