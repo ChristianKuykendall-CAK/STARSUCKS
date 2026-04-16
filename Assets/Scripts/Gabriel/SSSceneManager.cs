@@ -6,7 +6,7 @@ public class SSSceneManager : MonoBehaviour
     public static SSSceneManager instance;
 
     public string[] sceneNames = { "(SS)MainMenu", "(SS)Backstory", "PatientRoom", "Cafe", "EndScene" };
-    public int[] sceneOrder = { 1, 2, 3, 2, 3, 2, 3, 4 };
+    public int[] sceneOrder = { 1, 3, 2, 3, 2, 3, 2, 4 };
     public int currentSceneindex = 0;
 
     void Awake()
