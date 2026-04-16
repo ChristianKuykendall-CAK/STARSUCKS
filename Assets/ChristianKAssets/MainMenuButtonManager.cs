@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class MainMenuButtonManager : MonoBehaviour
 {
+
+    public GameObject creditPanel;
+
+    private bool credit_opened = false;
+
     public void StartGame()
     {
         SSSceneManager.instance.GoToCurrentScene();
@@ -10,6 +15,18 @@ public class MainMenuButtonManager : MonoBehaviour
     public void CreditScene()
     {
         // TODO: Make credit panel on main menu scene and toggle it.
+        //Done by Christian A :]
+        if (credit_opened == false)
+        {
+            credit_opened = true;
+            creditPanel.SetActive(true);
+        }
+        else if (credit_opened == true)
+        {
+            credit_opened = false;
+            creditPanel.SetActive(false);
+        }
+
     }
 
     public void ExitGame()
