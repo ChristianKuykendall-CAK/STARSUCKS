@@ -4474,6 +4474,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 664849115514045867, guid: 2d08731cc30cdbb41ae0be3606fe278c, type: 3}
+        m_TargetAssemblyTypeName: NeedleMinigameManager, Assembly-CSharp
+        m_MethodName: ResetTotalBlood
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1938072200
 MonoBehaviour:
   m_ObjectHideFlags: 0

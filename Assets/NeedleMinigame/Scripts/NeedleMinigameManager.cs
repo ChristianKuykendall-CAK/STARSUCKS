@@ -35,6 +35,11 @@ public class NeedleMinigameManager : MonoBehaviour
     {
         bloodAmount += amount;
     }
+    public void ResetTotalBlood()
+    {
+        bloodAmount = 0;
+        Debug.Log("Total Blood: " + GetTotalBlood());
+    }
 
     public float GetTotalBlood()
     {

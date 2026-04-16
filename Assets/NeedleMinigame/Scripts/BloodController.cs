@@ -42,7 +42,7 @@ public class BloodController : MonoBehaviour
         success.SetActive(true);
         NeedleMinigameManager.instance.SetTotalBlood(bloodAmount);
         text.text = "You extracted all the blood! \nAmount Extracted: " + bloodAmount + "\nTotal Extracted: " + NeedleMinigameManager.instance.GetTotalBlood();
-        if(NeedleMinigameManager.instance.GetTotalBlood() > 1000)
+        if(NeedleMinigameManager.instance.GetTotalBlood() > 500)
         {
             text.text += "\nYou've collected enough blood! Head to the cafe when you're ready!";
             goToCafe.SetActive(true);
