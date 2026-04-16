@@ -251,17 +251,6 @@ Transform:
   - {fileID: 1240504396}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &194583428 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6516784456203642093, guid: 2d08731cc30cdbb41ae0be3606fe278c, type: 3}
-  m_PrefabInstance: {fileID: 2222297307060320175}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 858c639f77330a8468bf8a052fc2468f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &324551241
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +810,8 @@ MonoBehaviour:
   nameText: {fileID: 1501128991}
   bloodTypeText: {fileID: 1552573281}
   commentsText: {fileID: 693475893}
+  patientFrontHair: {fileID: 0}
+  patientBackHair: {fileID: 0}
 --- !u!114 &842940120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,7 +929,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 194583428}
+      - m_Target: {fileID: 6516784456203642093, guid: 2d08731cc30cdbb41ae0be3606fe278c, type: 3}
         m_TargetAssemblyTypeName: ClinicManager, Assembly-CSharp
         m_MethodName: MoveToNeedleMinigame
         m_Mode: 1
@@ -3489,64 +3480,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d08731cc30cdbb41ae0be3606fe278c, type: 3}
---- !u!1001 &3428469789600943005
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5934538707697520694, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1866.1459
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934538707697520694, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1066.8193
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934538707697520694, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.7175252
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934538707697520694, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934538707697520694, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934538707697520694, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934538707697520694, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934538707697520694, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934538707697520694, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934538707697520694, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7875096841194985464, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4089280048228999166, guid: 2609575d296f5b44ea3b028155321039, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2609575d296f5b44ea3b028155321039, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3556,7 +3489,6 @@ SceneRoots:
   - {fileID: 324551242}
   - {fileID: 948427421}
   - {fileID: 2022658211}
-  - {fileID: 3428469789600943005}
   - {fileID: 1013106909}
   - {fileID: 2222297307060320175}
   - {fileID: 1230890453}

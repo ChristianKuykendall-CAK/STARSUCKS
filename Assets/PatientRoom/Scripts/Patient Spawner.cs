@@ -27,6 +27,7 @@ public class PatientSpawner : MonoBehaviour
     void Start()
     {
         offset = 0;
+        currentPatientCount = 0;
     }
 
     IEnumerator SpawnPatients()

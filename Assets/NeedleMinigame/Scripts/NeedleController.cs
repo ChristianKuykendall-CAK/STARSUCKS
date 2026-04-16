@@ -22,9 +22,10 @@ public class NeedleController : MonoBehaviour
     public GameObject failureScreen;
     public GameObject curtain;
     public GameObject hitEffect;
+    public bool hitVein;
 
-    
-    
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

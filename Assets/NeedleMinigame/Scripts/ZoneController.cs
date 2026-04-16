@@ -14,8 +14,9 @@ public class ZoneController : MonoBehaviour
     void Awake()
     {
         zone = GetComponent<Rigidbody2D>();
-        PickDirection();
     }
+
+
 
     void FixedUpdate()
     {
