@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -8,6 +9,8 @@ public class CoffeeBuilder : MonoBehaviour
     public CafeSceneManager cafeSceneManager;
     public Coffee coffee;
     public int snappedObjCount = 0;
+
+    public Image bloodI;
     
     public void Awake()
     {
@@ -22,6 +25,7 @@ public class CoffeeBuilder : MonoBehaviour
     public void SetBloodType(CoffeeOptions.BloodTypes bloodTypeChoice)
     {
         coffee.bloodType = bloodTypeChoice;
+        bloodI.enabled=true;
     }
 
     public void SetTopping(CoffeeOptions.Toppings toppingChoice)

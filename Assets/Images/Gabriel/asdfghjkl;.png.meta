@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7fe802df90c04714ea89d2ceaea13cf4
+guid: f4cc87debe2716c4a95b9dfe7ee2fde3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8701077417743621833
-    second: bloodflow2_0
+      213: -1539196504947923533
+    second: asdfghjkl;_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bloodflow2_0
+      name: asdfghjkl;_0
       rect:
         serializedVersion: 2
-        x: 331
-        y: 75
-        width: 121
-        height: 401
+        x: 383
+        y: 175
+        width: 314
+        height: 772
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ce18c7afcf60c870800000000000000
-      internalID: 8701077417743621833
+      spriteID: 3b56e0b0feca3aae0800000000000000
+      internalID: -1539196504947923533
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      bloodflow2_0: 8701077417743621833
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

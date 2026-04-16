@@ -27,6 +27,7 @@ public class CupSizes : MonoBehaviour
         {
             currentCup = Instantiate(Small, CupSpawner);
             currentCup.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            CoffeeBuilder.instance.bloodI = currentCup.GetComponentInChildren<Image>();
             CoffeeBuilder.instance.SetSize(CoffeeOptions.Sizes.small);
         } 
     }
@@ -37,6 +38,7 @@ public class CupSizes : MonoBehaviour
         {
             currentCup = Instantiate(Medium, CupSpawner);
             currentCup.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            CoffeeBuilder.instance.bloodI = currentCup.GetComponentInChildren<Image>();
             CoffeeBuilder.instance.SetSize(CoffeeOptions.Sizes.medium);
         } 
     }
@@ -47,6 +49,7 @@ public class CupSizes : MonoBehaviour
         {
             currentCup = Instantiate(Large, CupSpawner);
             currentCup.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            CoffeeBuilder.instance.bloodI = currentCup.GetComponentInChildren<Image>();
             CoffeeBuilder.instance.SetSize(CoffeeOptions.Sizes.large);
         } 
     }
