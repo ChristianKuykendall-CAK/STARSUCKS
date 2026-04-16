@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ChristianKScenes/(SS)MainMenu.unity
+    path: Assets/Scenes/(SS)MainMenu.unity
     guid: 71949fa74ef90d446b5780af50d4e609
   - enabled: 1
-    path: Assets/Scenes/ChristianKScenes/(SS)Backstory.unity
+    path: Assets/Scenes/(SS)Backstory.unity
     guid: 48fea40b3fa20034fae0a11fd8058abe
   - enabled: 1
-    path: Assets/Scenes/Cafe Scenes/Cafe.unity
+    path: Assets/Scenes/Cafe.unity
     guid: ccf94739fdd071344bc10e55b6e4ddb0
   - enabled: 1
     path: Assets/Scenes/PatientRoom.unity
@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NeedleMinigame.unity
     guid: cf50048c83dcc8d43b6bcd2a095925a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BloodExtraction.unity
     guid: 51b520daed7b7cf4f924a63fc442c26c
   - enabled: 0
