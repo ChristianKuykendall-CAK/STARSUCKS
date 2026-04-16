@@ -8,6 +8,7 @@ public class ChanceScript : MonoBehaviour
     public Image img;
     public Transform chanceContainer;
     private float offset;
+    public GameObject needle;
 
     private List<Image> lives = new List<Image>();
 
@@ -15,7 +16,13 @@ public class ChanceScript : MonoBehaviour
     {
         UpdateHearts(NeedleMinigameManager.instance.GetChances());
     }
-
+    void Update()
+    {
+        if (needle.GetComponent<NeedleController>().hitVein)
+        {
+            gameObject.SetActive(false);
+        }
+    }
     public void UpdateHearts(int newLives)
     {
         

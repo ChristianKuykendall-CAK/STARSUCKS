@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4971136410544254712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8901612501526007049}
+  - component: {fileID: 7332527398478175103}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &8901612501526007049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971136410544254712}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: -0.029049162}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7332527398478175103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971136410544254712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3001156a58f2946bb30bc23a6a3117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eyes:
+  - {fileID: 721492017, guid: de1e76cc387b5cf4fb1ec8c6f02798d1, type: 3}
+  - {fileID: 133928567, guid: de1e76cc387b5cf4fb1ec8c6f02798d1, type: 3}
+  - {fileID: -153134611, guid: de1e76cc387b5cf4fb1ec8c6f02798d1, type: 3}
+  - {fileID: 1952061531, guid: de1e76cc387b5cf4fb1ec8c6f02798d1, type: 3}
+  - {fileID: 1256546740, guid: de1e76cc387b5cf4fb1ec8c6f02798d1, type: 3}
+  - {fileID: 2100696707, guid: de1e76cc387b5cf4fb1ec8c6f02798d1, type: 3}
+  mouths:
+  - {fileID: 1230353148, guid: fef63a590fd46fb44a8a07c81a1bda1d, type: 3}
+  - {fileID: 102767915, guid: fef63a590fd46fb44a8a07c81a1bda1d, type: 3}
+  - {fileID: 820641834, guid: fef63a590fd46fb44a8a07c81a1bda1d, type: 3}
+  - {fileID: 698311442, guid: fef63a590fd46fb44a8a07c81a1bda1d, type: 3}
+  - {fileID: 1032961771, guid: fef63a590fd46fb44a8a07c81a1bda1d, type: 3}
+  frontHairs:
+  - {fileID: 493307469, guid: 682cc3e89a82ede4f82e1a2f75a67e71, type: 3}
+  - {fileID: -1326248666, guid: 682cc3e89a82ede4f82e1a2f75a67e71, type: 3}
+  - {fileID: -1432955829, guid: 682cc3e89a82ede4f82e1a2f75a67e71, type: 3}
+  - {fileID: -682426972, guid: 682cc3e89a82ede4f82e1a2f75a67e71, type: 3}
+  - {fileID: 861214831, guid: 682cc3e89a82ede4f82e1a2f75a67e71, type: 3}
+  - {fileID: -1977828048, guid: 682cc3e89a82ede4f82e1a2f75a67e71, type: 3}
+  - {fileID: 1546848966, guid: 682cc3e89a82ede4f82e1a2f75a67e71, type: 3}
+  - {fileID: 389353907, guid: 682cc3e89a82ede4f82e1a2f75a67e71, type: 3}
+  backHairs:
+  - {fileID: 2134037012, guid: 2ca627e925d50794c93081ea72b64a19, type: 3}
+  - {fileID: 1311783100, guid: 2ca627e925d50794c93081ea72b64a19, type: 3}
+  - {fileID: 500238914, guid: 2ca627e925d50794c93081ea72b64a19, type: 3}
+  - {fileID: -1435078990, guid: 2ca627e925d50794c93081ea72b64a19, type: 3}
+  - {fileID: 1892550613, guid: 2ca627e925d50794c93081ea72b64a19, type: 3}
+  - {fileID: 48749609, guid: 2ca627e925d50794c93081ea72b64a19, type: 3}
+  firstName:
+  - Bread
+  - Brady
+  - Bradella
+  - Bradilicious
+  - Bradley
+  - Braddy
+  - Brady-Boy
+  - Bradden
+  - B-Rad
+  - Bradious
+  - Bradrix
+  - Bradeon
+  - Bradric
+  - Bradster
+  - Bradian
+  - Bradwin
+  - Braddy
+  - Bray
+  - Bradeny
+  - BradPhil
+  lastName:
+  - Patient
+  - John
+  - High
+  - Low
+  - Shawty
+  - Fatty
+  - Christian
+  - Pagan
+  - Alvarez
+  - Andrion
+  - Brady
+  - Charles
+  - Custard
+  - Mustard
+  - Kamikaze
+  - Eminem
+  - Opus
+  - Swift
+  patientPrefab: {fileID: 7194485087656459188, guid: d1d52c8595c7a9b4aab23fd97513e641, type: 3}
+  maxPatients: 5
+  currentPatientCount: 0
+  spawnInterval: 5

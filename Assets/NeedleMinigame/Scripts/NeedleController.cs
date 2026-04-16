@@ -19,9 +19,10 @@ public class NeedleController : MonoBehaviour
     public GameObject failureScreen;
     public GameObject curtain;
     public GameObject hitEffect;
+    public bool hitVein;
 
-    
-    
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -93,7 +94,7 @@ public class NeedleController : MonoBehaviour
             Debug.Log("You've missed the vein!");
         }
     }
-    void OnJump()
+    void OnAttack()
     { 
         needleDrop = true;
         StartCoroutine("DropNeedle");
