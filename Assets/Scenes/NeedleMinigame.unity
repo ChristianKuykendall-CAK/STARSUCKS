@@ -2855,6 +2855,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153083283}
   m_CullTransparentMesh: 1
+--- !u!1 &1162372723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1162372725}
+  - component: {fileID: 1162372724}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1162372724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162372723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc75443810223de42b5406bbf4c12d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNames:
+  - (SS)MainMenu
+  - (SS)Backstory
+  - PatientRoom
+  - Cafe
+  - EndScene
+  sceneOrder: 0100000002000000030000000200000003000000020000000300000004000000
+  currentSceneindex: 1
+--- !u!4 &1162372725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162372723}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1003.48737, y: 509.90607, z: 4.1179705}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1165526284
 GameObject:
   m_ObjectHideFlags: 0
@@ -4379,6 +4431,7 @@ GameObject:
   - component: {fileID: 1938072201}
   - component: {fileID: 1938072200}
   - component: {fileID: 1938072199}
+  - component: {fileID: 1938072202}
   m_Layer: 6
   m_Name: CafeButton
   m_TagString: Untagged
@@ -4512,6 +4565,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938072197}
   m_CullTransparentMesh: 1
+--- !u!114 &1938072202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938072197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d49378bf382be4bafee9934f070d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1998849176
 GameObject:
   m_ObjectHideFlags: 0
@@ -5745,3 +5810,4 @@ SceneRoots:
   - {fileID: 1657808248}
   - {fileID: 1502935089}
   - {fileID: 1915790751}
+  - {fileID: 1162372725}
